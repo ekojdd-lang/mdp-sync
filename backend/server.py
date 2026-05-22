@@ -16,6 +16,7 @@ from reportlab.lib import colors
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.styles import getSampleStyleSheet
 from reportlab.lib.units import cm
+from playwright.sync_api import sync_playwright
 
 from reportlab.platypus import (
     SimpleDocTemplate,
@@ -769,3 +770,36 @@ def generate_devis_pdf(
     finally:
 
         db.close()
+        
+
+@app.get("/test-browser")
+def test_browser():
+
+    try:
+
+        with sync_playwright() as p:
+
+            browser = p.chromium.launch(
+                headless=True,
+                args=["--no-sandbox"]
+            )
+
+            page = browser.new_page()
+
+            page.goto("https://example.com")
+
+            title = page.title()
+
+            browser.close()
+
+            return {
+                "success": True,
+                "title": title
+            }
+
+    except Exception as e:
+
+        return {
+            "success": False,
+            "error": str(e)
+        }
