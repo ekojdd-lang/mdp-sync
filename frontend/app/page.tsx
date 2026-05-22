@@ -2,6 +2,9 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+const API_URL =
+  process.env.NEXT_PUBLIC_API_URL ||
+  "http://localhost:8000";
 
 import {
   Search,
@@ -28,10 +31,6 @@ import {
 // API
 // ======================================================
 
-// URL du backend FastAPI
-const API_URL =
-  process.env.NEXT_PUBLIC_API_URL ||
-  "http://127.0.0.1:8000";
 
 // ======================================================
 // TYPES
