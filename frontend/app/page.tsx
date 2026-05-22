@@ -28,7 +28,10 @@ import {
 // API
 // ======================================================
 
-const API_URL = "http://192.168.1.65:8000";
+// URL du backend FastAPI
+const API_URL =
+  process.env.NEXT_PUBLIC_API_URL ||
+  "http://127.0.0.1:8000";
 
 // ======================================================
 // TYPES
