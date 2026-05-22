@@ -781,7 +781,12 @@ def test_browser():
 
             browser = p.chromium.launch(
                 headless=True,
-                args=["--no-sandbox"]
+                executable_path="/opt/render/project/.cache/ms-playwright/chromium-1223/chrome-linux/chrome",
+                args=[
+                    "--no-sandbox",
+                    "--disable-dev-shm-usage",
+                    "--disable-gpu"
+                ]
             )
 
             page = browser.new_page()
