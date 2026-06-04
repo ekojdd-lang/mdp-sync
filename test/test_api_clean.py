@@ -1,11 +1,12 @@
 from playwright.sync_api import sync_playwright
+import json
 
 URL = (
     "https://www.maisondelapressegabon.com/"
     "gestion/api/articles.php"
     "?action=getArticle"
-    "&gencod=9782017253709"
-    "&typeProduit=1"
+    "&gencod=8422084042219"
+    "&typeProduit=5"
 )
 
 with sync_playwright() as p:
@@ -20,15 +21,13 @@ with sync_playwright() as p:
 
     page = context.new_page()
 
-    # IMPORTANT
-    # ouvrir une page connectée
     page.goto(
-        "https://www.maisondelapressegabon.com/gestion/articles.php"
+        "https://www.maisondelapressegabon.com/gestion/articles.php",
+        wait_until="domcontentloaded",
+        timeout=60000
     )
 
     page.wait_for_timeout(3000)
-
-    print("Requête API...")
 
     print("Requête API...")
 
@@ -47,7 +46,23 @@ with sync_playwright() as p:
         URL
     )
 
-    print("\n===== REPONSE SERVEUR =====\n")
-    print(content)
+    data = json.loads(content)
+
+    article = data["article"]
+
+    print("\n===== CLES ARTICLE =====\n")
+
+    for key in sorted(article.keys()):
+        print(key)
+
+    print("\n===== ARTICLE COMPLET =====\n")
+
+    print(
+        json.dumps(
+            article,
+            indent=2,
+            ensure_ascii=False
+        )
+    )
 
     browser.close()

@@ -1,18 +1,11 @@
 import asyncio
 
-from backend.auth import AuthManager
-
+from auth import AuthManager
 from api.mdp_api import MaisonPresseAPI
-
-from backend.core.database import DatabaseManager
-
+from core.database import DatabaseManager
 from services.sync_service import SyncService
-
 from services.import_service import ImportService
-
 from services.export_service import ExportService
-
-from backend.core.playwright_manager import PlaywrightManager
 
 
 async def main():
@@ -69,35 +62,18 @@ async def main():
     finally:
 
         try:
-
             await api.close()
-
         except Exception as e:
-
             print("api close error:", e)
 
         try:
-
             await auth.close()
-
         except Exception as e:
-
             print("auth close error:", e)
 
         try:
-
-            await PlaywrightManager.close()
-
-        except Exception as e:
-
-            print("playwright close error:", e)
-
-        try:
-
             db.close()
-
         except Exception as e:
-
             print("db close error:", e)
 
         # IMPORTANT WINDOWS + PLAYWRIGHT
@@ -105,5 +81,4 @@ async def main():
 
 
 if __name__ == "__main__":
-
     asyncio.run(main())

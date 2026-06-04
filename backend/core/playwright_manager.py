@@ -3,61 +3,65 @@ from playwright.async_api import async_playwright
 
 class PlaywrightManager:
 
-    _instance = None
+    _playwright = None
+    _browser = None
+    _lock = False
 
-    playwright = None
-
-    browser = None
-
+    # ==========================================
+    # INIT SAFE
+    # ==========================================
     @classmethod
-    async def init(cls):
+    async def init(cls, headless: bool = False):
 
-        if cls._instance is None:
+        if cls._browser:
+            return cls._browser
 
-            cls._instance = cls()
+        if cls._lock:
+            raise Exception("Playwright en cours d'initialisation")
 
-            cls.playwright = await async_playwright().start()
+        cls._lock = True
 
-            cls.browser = await cls.playwright.chromium.launch(
-                headless=False
+        try:
+            cls._playwright = await async_playwright().start()
+
+            cls._browser = await cls._playwright.chromium.launch(
+                headless=headless
             )
 
-        return cls._instance
+            return cls._browser
 
+        finally:
+            cls._lock = False
+
+    # ==========================================
+    # GET BROWSER
+    # ==========================================
     @classmethod
     async def get_browser(cls):
 
-        if cls.browser is None:
-
+        if cls._browser is None:
             await cls.init()
 
-        return cls.browser
+        return cls._browser
 
+    # ==========================================
+    # CLOSE SAFE
+    # ==========================================
     @classmethod
     async def close(cls):
 
-        try:
+        if cls._browser:
+            try:
+                await cls._browser.close()
+            except Exception as e:
+                print("browser close error:", e)
+            finally:
+                cls._browser = None
 
-            if cls.browser:
-
-                await cls.browser.close()
-
-                cls.browser = None
-
-        except Exception as e:
-
-            print("browser close error:", e)
-
-        try:
-
-            if cls.playwright:
-
-                await cls.playwright.stop()
-
-                cls.playwright = None
-
-        except Exception as e:
-
-            print("playwright stop error:", e)
-
-        cls._instance = None
+        if cls._playwright:
+            try:
+                await cls._playwright.stop()
+            except Exception as e:
+                print("playwright stop error:", e)
+            finally:
+                cls._playwright = None
