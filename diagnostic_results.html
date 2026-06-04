@@ -1,0 +1,1535 @@
+<!DOCTYPE html><html><head>
+  <!--// ACS4WWW8 | 5499 |  //-->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/x-icon" href="https://static.epagine.fr/mediaweb3/5499/favicon.ico">
+  <title>Interface de gestion du site de la librairie : Maison de la Presse Gabon</title>
+  <meta name="robots" content="noindex,nofollow">
+    <link rel="stylesheet" href="https://static.epagine.fr/bootstrap-5.3.8/css/bootstrap.min.css">
+  <!--<link rel="stylesheet" type="text/css" href="/gestion/js/plugins/BeatPicker-master/css/BeatPicker.css">-->
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	<link href="css/plugins/datetimepicker-master/jquery.datetimepicker.css" rel="stylesheet">
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+      <link href="//netdna.bootstrapcdn.com/respond-proxy.html" id="respond-proxy" rel="respond-proxy">
+      <link href="js/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
+      <script src="js/respond.proxy.js"></script>
+    <![endif] -->
+	<link rel="stylesheet" href="https://static.epagine.fr/vendor/bootstrap-datepicker/1.4.0/css/bootstrap-datepicker3.min.css" type="text/css">
+  <link href="css/style.css?v=1.0" rel="stylesheet">
+  <link href="css/bootstrap-side-modals.css" rel="stylesheet">
+  <link href="css/print.css" rel="stylesheet">
+  <link href="css/gestion_bs.css?v=DWF-6372" rel="stylesheet">
+</head>
+<body>
+<div id="myModalGestion" class="modal inmodal fade" aria-hidden="true" role="dialog" tabindex="-1" style="display:none">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+    </div>
+  </div>
+</div>
+
+<div id="myModalContact" class="modal inmodal fade" aria-hidden="true" role="dialog" tabindex="-1" style="display:none">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+    </div>
+  </div>
+</div>
+
+<div id="myModalMd" class="modal inmodal fade" aria-hidden="true" role="dialog" tabindex="-1" style="display:none">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+    </div>
+  </div>
+</div>
+
+<div class="modal" tabindex="-1" id="modal_responsive_scrollable">
+    <div class="modal-dialog modal-xl modal-fullscreen-lg-down modal-dialog-scrollable">
+        <div class="modal-content"></div>
+    </div>
+</div>
+        
+<div class="modal right fade" id="modaleHelp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header bg-transparent">
+        <h4 class="modal-title fw-bold h5 mt-4" id="myModalLabel2">Aide</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <ul>
+                            <li><a href="https://static.epagine.fr/docs/creer_un_article.pdf" target="_blank">Créer un article</a>
+                            </li><li><a href="https://static.epagine.fr/docs/desactiver_un_article.pdf" target="_blank">Désactiver un article</a>
+                                    
+        </li></ul>
+      </div>
+      <div class="modal-footer">
+        <a href="https://bit.ly/3hWqQ97" target="_blank">Documentation générale</a>
+      </div>
+    </div><!-- modal-content -->
+  </div><!-- modal-dialog -->
+</div><!-- modal -->
+
+<div id="wrapper" class="d-flex">
+<div id="MODAL-SEARCHA" class="modal"></div>
+<nav class="navbar-static-side">
+    <ul class="nav">
+        <li>
+            <div class="nav-header profile-element">
+                                <span class="d-flex justify-content-between">
+                    <a href="./" class="pull-right">
+                        <img src="https://static.epagine.fr/mediaweb3/5499/logo_mdpgabon.png">
+                    </a>
+                </span>
+                                <a href="./" class="min">
+                    <span class="mt-1"> 
+                         <strong class="font-bold">ROLAND DOVALE</strong>
+                    </span> 
+                    <span class="mail">ipc369@yahoo.fr</span> 
+                </a>
+                                                                                        
+            </div>
+        </li>
+        <div class="liens" id="nav_accordion">
+                                                    <li>
+                    <a id="mise_en_ligne" href="/?ssh_id=&amp;nocache&amp;copiecache=1" target="_blank" rel="noopener">
+                        <i class="far fa-sync"></i>
+                        <button class="btn btn-primary min ms-3" type="button">Mettre en ligne</button>
+                    </a>
+                </li>
+                                                
+                                                                                                                                                                                                                                                                                                                                                
+                <li>
+                                                                <a href="#" data-bs-toggle="collapse" data-bs-target="#menu_0">
+                            <i class="far fa-store"></i>                            <span class="nav-label min">Magasin</span>
+                            <span class="fa fa-angle-right fa-pull-right"></span>
+                        </a>
+                        <ul class="submenu collapse" id="menu_0" data-bs-parent="#nav_accordion">
+                                                            <li>
+                                    <a href="infos_pratiques.php">
+                                                                                Infos pratiques
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="infos_commerciales.php">
+                                                                                Infos commerciales
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="graphisme.php">
+                                                                                Graphisme
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="vpc.php">
+                                                                                Tarifs de livraison
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="mon_compte.php">
+                                                                                Compte
+                                    </a>
+                                </li>
+                                                    </ul>
+                                                        </li>
+            
+                                                                                
+                <li>
+                                                                <a href="documentation.php">
+                            <i class="far fa-memo-circle-info"></i>                            <span class="nav-label min">Aide</span>
+                        </a>
+                                    </li>
+            
+                                                                                
+                <li>
+                                                                <a href="upload_files.php" target="_blank" rel="noopener">
+                            <i class="far fa-image"></i>                            <span class="nav-label min">Banque d'images (téléversement)</span>
+                        </a>
+                                    </li>
+            
+                                                                                                                                                                                                                                                                
+                <li class="active">
+                                                                <a href="#" data-bs-toggle="collapse" data-bs-target="#menu_3" aria-expanded="true">
+                            <i class="far fa-database"></i>                            <span class="nav-label min">Base de données</span>
+                            <span class="fa fa-angle-right fa-pull-right fa-rotate-90"></span>
+                        </a>
+                        <ul class="submenu collapse show" id="menu_3" data-bs-parent="#nav_accordion">
+                                                            <li class="active">
+                                    <a href="articles.php">
+                                                                                Création Articles
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="rayons_catalogue.php">
+                                                                                Rayons Medialog/Internet
+                                    </a>
+                                </li>
+                                                    </ul>
+                                                        </li>
+            
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+                <li>
+                                                                <a href="#" data-bs-toggle="collapse" data-bs-target="#menu_4">
+                            <i class="far fa-home"></i>                            <span class="nav-label min">Animations (de la page d'accueil)</span>
+                            <span class="fa fa-angle-right fa-pull-right"></span>
+                        </a>
+                        <ul class="submenu collapse" id="menu_4" data-bs-parent="#nav_accordion">
+                                                            <li>
+                                    <a href="edito.php">
+                                                                                Édito
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="slide.php">
+                                                                                Sliders
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="slide.php?type_visuel=1&amp;type_page=2">
+                                                                                Bandeau accueil
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="blocLibre_list.php">
+                                                                                Blocs et tables
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="selections.php">
+                                                                                Menu personnalisé
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="selections.php?type_id=2">
+                                                                                Rayons magasin
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="toppalmares.php">
+                                                                                Palmarès
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="zoneColonne.php">
+                                                                                Zones libres colonnes
+                                    </a>
+                                </li>
+                                                    </ul>
+                                                        </li>
+            
+                                                                                
+                <li>
+                                                                <a href="pages_libres.php">
+                            <i class="far fa-memo"></i>                            <span class="nav-label min">Pages libres</span>
+                        </a>
+                                    </li>
+            
+                                                                                
+                <li>
+                                                                <a href="onglets.php">
+                            <i class="far fa-table-tree"></i>                            <span class="nav-label min">Onglets</span>
+                        </a>
+                                    </li>
+            
+                                                                                
+                <li>
+                                                                <a href="agenda.php">
+                            <i class="far fa-calendar"></i>                            <span class="nav-label min">Agenda</span>
+                        </a>
+                                    </li>
+            
+                                                                                                                                                                                                            
+                <li>
+                                                                <a href="#" data-bs-toggle="collapse" data-bs-target="#menu_8">
+                            <i class="far fa-message-heart"></i>                            <span class="nav-label min">Coups de coeur</span>
+                            <span class="fa fa-angle-right fa-pull-right"></span>
+                        </a>
+                        <ul class="submenu collapse" id="menu_8" data-bs-parent="#nav_accordion">
+                                                            <li>
+                                    <a href="coupscoeur.php">
+                                                                                Gestion des coups de coeur
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="redacteurs.php">
+                                                                                Gestion des rédacteurs
+                                    </a>
+                                </li>
+                                                    </ul>
+                                                        </li>
+            
+                                                                                                                                                                                                                                                        
+                <li>
+                                                                <a href="#" data-bs-toggle="collapse" data-bs-target="#menu_9">
+                            <i class="far fa-money-bill-trend-up"></i>                            <span class="nav-label min">Ventes</span>
+                            <span class="fa fa-angle-right fa-pull-right"></span>
+                        </a>
+                        <ul class="submenu collapse" id="menu_9" data-bs-parent="#nav_accordion">
+                                                            <li>
+                                    <a href="gestioncorb.php">
+                                                                                Gestion des paniers
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="ventes_details.php">
+                                                                                Détails des ventes par article
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="stats.php">
+                                                                                Statistiques
+                                    </a>
+                                </li>
+                                                    </ul>
+                                                        </li>
+            
+                                                                                                                                                                                                            
+                <li>
+                                                                <a href="#" data-bs-toggle="collapse" data-bs-target="#menu_10">
+                            <i class="far fa-user"></i>                            <span class="nav-label min">Clients</span>
+                            <span class="fa fa-angle-right fa-pull-right"></span>
+                        </a>
+                        <ul class="submenu collapse" id="menu_10" data-bs-parent="#nav_accordion">
+                                                            <li>
+                                    <a href="liste_clients.php?type=part&amp;type_page=search">
+                                                                                Clients Particuliers
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="liste_clients.php?type=pro">
+                                                                                Clients pro
+                                    </a>
+                                </li>
+                                                    </ul>
+                                                        </li>
+            
+                                                                                                                                                                                                                                                                                                    
+                <li>
+                                                                <a href="#" data-bs-toggle="collapse" data-bs-target="#menu_11">
+                            <i class="far fa-hashtag"></i>                            <span class="nav-label min">Réseaux/SEO</span>
+                            <span class="fa fa-angle-right fa-pull-right"></span>
+                        </a>
+                        <ul class="submenu collapse" id="menu_11" data-bs-parent="#nav_accordion">
+                                                            <li>
+                                    <a href="reseaux_sociaux.php">
+                                                                                Réseaux sociaux
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="https://analytics.google.com/analytics/web/" target="_blank" rel="noopener">
+                                                                                Google analytics
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="tag.php">
+                                                                                Mots clés
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="faq.php">
+                                                                                FAQ Clients
+                                    </a>
+                                </li>
+                                                    </ul>
+                                                        </li>
+            
+                                                                                                                                                                                                                                                        
+                <li>
+                                                                <a href="#" data-bs-toggle="collapse" data-bs-target="#menu_12">
+                            <i class="far fa-percent"></i>                            <span class="nav-label min">Promotions</span>
+                            <span class="fa fa-angle-right fa-pull-right"></span>
+                        </a>
+                        <ul class="submenu collapse" id="menu_12" data-bs-parent="#nav_accordion">
+                                                            <li>
+                                    <a href="promotions.php">
+                                                                                Mes promotions
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="promotions_catalogue.php">
+                                                                                Promotions numériques éditeurs
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="remises.php">
+                                                                                Remises
+                                    </a>
+                                </li>
+                                                    </ul>
+                                                        </li>
+            
+                                                                                                                                                                
+                <li>
+                                                                <a href="#" data-bs-toggle="collapse" data-bs-target="#menu_13">
+                            <i class="far fa-rectangle-pro"></i>                            <span class="nav-label min">Fonctions pro</span>
+                            <span class="fa fa-angle-right fa-pull-right"></span>
+                        </a>
+                        <ul class="submenu collapse" id="menu_13" data-bs-parent="#nav_accordion">
+                                                            <li>
+                                    <a href="suivi_commandes.php">
+                                                                                Suivi de commande Medialog
+                                    </a>
+                                </li>
+                                                    </ul>
+                                                        </li>
+            
+                                                                                                                                                                                                            
+                <li>
+                                                                <a href="#" data-bs-toggle="collapse" data-bs-target="#menu_14">
+                            <i class="far fa-scale-balanced"></i>                            <span class="nav-label min">RGPD</span>
+                            <span class="fa fa-angle-right fa-pull-right"></span>
+                        </a>
+                        <ul class="submenu collapse" id="menu_14" data-bs-parent="#nav_accordion">
+                                                            <li>
+                                    <a href="coordonnees_soustraitants.php">
+                                                                                Traitements
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="accessibilite.php">
+                                                                                Accessibilité
+                                    </a>
+                                </li>
+                                                    </ul>
+                                                        </li>
+            
+                                                                                                                                                                
+                <li>
+                                                                <a href="#" data-bs-toggle="collapse" data-bs-target="#menu_15">
+                            <i class="far fa-book-arrow-up"></i>                            <span class="nav-label min">Catalogue numérique</span>
+                            <span class="fa fa-angle-right fa-pull-right"></span>
+                        </a>
+                        <ul class="submenu collapse" id="menu_15" data-bs-parent="#nav_accordion">
+                                                            <li>
+                                    <a href="statsPNB.php">
+                                                                                Informations sur le catalogue PNB
+                                    </a>
+                                </li>
+                                                    </ul>
+                                                        </li>
+                    </div>
+    </ul>
+</nav><div id="page-wrapper" class="d-block">
+  <div class="header-nav">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light" role="navigation">
+          <div class="row mx-3">
+              <a class="btn btn-primary " href="#" title="Menu gestion" id="btn_gestion"><i class="fa fa-bars"></i></a>
+          </div>
+          <ul class="navbar-nav navbar-right">
+              <li class="nav-item">
+                <h1 class="mb-0 welcome-message">Interface de gestion : www.maisondelapressegabon.com</h1>
+              </li>
+              <li class="nav-item">
+                <a href="deconnexion.php">
+                  <i class="fa fa-sign-out"></i> Déconnexion                </a>
+              </li>
+                                      </ul>
+      </nav>
+  </div>
+
+  <!-- 
+  NOT IN INSPINIA ORIGINAL TEMPLATE
+  <div class="wrapper wrapper-content animated fadeInRight">
+      <div class="row">
+          <div class="col-lg-12"> -->
+<div> 
+        	    <div class="row">
+		<div class="col-12 mb-02">
+			<div class="d-flex align-items-center justify-content-between mt-4">
+				<div class="card-header">
+					<h2 class="card-title">
+						Enrichissement articles du site
+					</h2>
+					<b>Cette interface permet d' enrichir les informations liées à un article pour le site</b>
+					<p>Saisissez un gencod, sélectionnez le type de produit correspondant puis validez.</p>
+				</div>
+				<button class="btn btn-info text-end fw-bold" id="helpModale" data-bs-toggle="modal" data-bs-target="#modaleHelp" data-bs-backdrop="static" data-bs-keyboard="false">
+					<i class="far fa-question-circle"></i>&nbsp;Besoin d'aide ?
+				</button>
+			</div>
+			<div class="col-12 row align-items-center">
+                <div class="col-2 me-2">
+                    <select id="selectionType" class="form-select" name="selectionType">
+													<option value="1">Livre papier</option>
+													<option value="5">Jouets</option>
+													<option value="6">Papeterie</option>
+											</select>
+				</div>				
+				<div class="col-2">
+					<div class="input-group">
+						<span class="input-group-text">
+							<i class="far fa-barcode"></i>
+						</span>
+						<input type="text" class="form-control" id="search-gencod" placeholder="Gencod">
+					</div>
+				</div>
+				<button type="button" id="search-article" class="col-auto btn btn-primary">
+					<i class="fas fa-search"></i>
+					<i id="search-loader" class="fas fa-spinner fa-pulse d-none"></i>
+				</button>
+                <div id="activeModifs" class="col-6 d-none">
+                    <div class="alert alert-warning clearfix">
+                        <div class="col-md-10">Les informations de cette fiche sont issues de Mediabase. Si vous souhaitez l'éditer, veuillez activer le bouton ci-contre.<br><em><strong>NB: La mise à jour sera effectuée ultérieurement dans les plus courts délais.</strong></em></div>
+                        <div class="col-md-2">
+                            <input type="checkbox" id="modifArticle" class="cbxPt d-none" name="modifArticle">
+                            <label for="modifArticle" class="chkPt"></label>
+                        </div>                    
+                    </div>                    
+                </div>
+				<button type="button" id="new-article" class="col-auto btn btn-danger d-none">
+					<i class="fas fa-plus"></i>
+					Nouveau
+					<i id="new-loader" class="fas fa-spinner fa-pulse d-none"></i>
+				</button>
+				<button type="button" id="article-save" class="col-auto btn btn-primary d-none" data-mbase="0">
+					<i class="fas fa-cloud-upload"></i>
+					Sauvegarder
+					<i id="save-loader" class="fas fa-spinner fa-pulse d-none"></i>
+				</button>
+				<button type="button" id="article-delete" class="col-auto btn btn-danger d-none">
+					<i class="fas fa-trash"></i>
+					Supprimer l'article
+					<i id="delete-loader" class="fas fa-spinner fa-pulse d-none"></i>
+				</button>
+			</div>
+		</div>
+		<div class="col-sm-12 mb-02">
+			    <div class="col-sm-12 pt-005">
+        <p id="helper-wrong-gencod" class="alert alert-danger helper">Le gencod saisi n'est pas conforme.</p>
+        <p id="helper-not-found" class="alert alert-warning d-none helper">Aucun article ne correspond à ce gencod</p>
+        <p id="helper-exist" class="alert alert-warning d-none helper">Ce gencod est déjà associé à un produit de la base  <span id="otherType" style="font-weight: bold;"></span>.</p>
+        <p id="select-type-gencod" class="alert alert-warning d-none helper">Veuillez saisir un gencod et sélectionner un type de produit</p>
+        <p id="helper-type-api-exist" class="alert alert-warning d-none helper">Ce gencod est déjà associé à un produit de type <span id="baseApiExist" style="font-weight: bold;"></span> dans l' API.</p>
+        <p id="helper-unauthorized-type" class="alert alert-danger d-none helper">Ce gencod est associé à un produit de la base  <span id="baseUnauthorized" style="font-weight: bold;"></span>, non disponible pour ce magasin.</p>
+        <p id="helper-save-ok" class="alert alert-success d-none helper">Article sauvegardé</p>        
+        <p id="helper-modif-mbase-ok" class="alert alert-success d-none helper">Les modifications pour cet article sont bien prises en compte. Le service associé effectuera dans les plus courts délais les changements souhaités.</p>
+        <p id="helper-save-error" class="alert alert-danger d-none helper">Erreur durant la sauvegarde de l'article</p>
+        <p id="helper-delete-ok" class="alert alert-success d-none helper">La suppression a bien été effectuée</p>
+        <p id="helper-delete-error" class="alert alert-danger d-none helper">Erreur lors de la suppression.</p>
+        <p id="helper-process-error" class="alert alert-danger d-none helper">Erreur durant le processus. Veuillez recommencer.</p>
+	</div>
+
+		</div>
+	</div>    
+	<form id="article-form" class="d-none" name="article-form">
+		<input type="hidden" id="can-be-upsert" class="form-data" name="can_be_upsert" value="false">
+		<input type="hidden" id="can-be-delete" class="form-data" name="can_be_delete" value="false">
+		<input type="hidden" id="can-be-black-list" class="form-data" name="can_be_black_list" value="false">
+		<input type="hidden" id="is-new" name="is_new" class="form-data" value="true">
+        <input type="hidden" id="code_support" data-libelle="support" class="form-data" name="code_support" value="">
+		<div id="get" class="row">
+			<div class="col-md-2">
+                <div class="col-sm-12">
+                    <div class="col-sm-12 no-padding position-relative">
+                        <img id="file-cover" src="https://images.epagine.fr/000/0000000000000_jm.jpg" style="width:100%">
+                        <div id="file-cover-dl-icon" class="icon-wrapper">
+                            <i class="fal fa-upload fa-2x"></i>
+                        </div>
+                        <input class="btn btn-default" type="file" id="filz">
+                        <input type="hidden" id="image" class="form-data" name="image">
+                    </div>
+                </div>
+			</div>
+			<div class="col-md-10">
+				<div class="col-12 row mb-02">
+					<div class="col-md-8 col-sm-12 mb-05">
+							<fieldset id="block_generique">
+		<legend class="border-bottom mb-02">Informations génériques</legend>
+		<div class="row">
+			<div class="row col-sm-12 mb-01">
+				<label class="col text-end fw-normal text-secondary">Type</label>
+				<div class="col" id="selectmenu">
+                    <input type="hidden" id="type-produit" class="form-data" name="type_produit" value="">
+                    <input type="text" id="produit_type" name="produit_type" value="" readonly="" disabled="">                   
+				</div>
+			</div>
+			<div class="row col-sm-12 mb-01">
+				<label class="col text-end fw-normal text-secondary">Gencod</label>		
+				<div class="col">	
+					<input id="gencod" class="form-data" name="gencod" type="text" value="" readonly="">	
+				</div>		
+			</div>			
+			<div class="row col-sm-12 mb-01">
+				<label class="col text-end fw-normal text-secondary">Date de création</label>
+				<div class="col">
+					<input id="date-creation" class="form-data border-b" name="date_creation" type="date" value="" readonly="">
+				</div>
+			</div>
+			<div class="row col-sm-12 mb-01">
+				<label class="col text-end fw-normal text-secondary">Date de modification</label>
+				<div class="col">
+					<input id="date-modification" data-libelle="date_modification" class="form-data border-b" name="date_modification" type="date" value="" readonly="">
+				</div>
+			</div>
+		</div>
+	</fieldset>
+
+					</div>
+					<div class="col-md-4 col-sm-12 mb-05">
+							<fieldset id="block_prix">
+		<legend class="border-bottom mb-02">Prix</legend>
+		<div class="row">
+			<div class="col-sm-12 row mb-01">
+				<label class="col text-end fw-normal text-secondary">
+					Prix TTC
+					<span class="text-danger">*</span>
+				</label>
+				<input class="form-data border-b col" id="prix-ttc" data-libelle="prix_ttc" name="prix" onchange="calculPrixHT()" onkeyup="calculPrixHT()" type="number" min="0.00" max="10000.00" step="0.10" value="">
+				<span class="col">CFA</span>
+			</div>
+			<div class="col-sm-12 row mb-01">
+				<label class="col text-end fw-normal text-secondary">Prix HT</label>
+				<input class="form-data col border-b" id="prix-ht" data-libelle="prix_ht" type="number" min="0.00" max="10000.00" step="0.10" value="" name="prix_ht" disabled="" readonly="">
+				<span class="col">CFA</span>
+			</div>
+			<div class="col-sm-12 row mb-01">
+				<label class="col text-end fw-normal text-secondary">Taux TVA
+					<span class="text-danger">*</span>
+				</label>
+				<input type="hidden" id="tva-taux" data-libelle="taux_tva" class="form-data border-b col" name="tva_taux">
+				<input type="hidden" id="tva-code" data-libelle="code_tva" class="form-data border-b col" name="tva_code">
+				<div class="col">
+					<select id="tva" class="tva border-b" onchange="calculPrixHT()">
+											</select>
+				</div>
+				<span class="col"></span>
+			</div>
+		</div>
+    </fieldset>
+
+					</div>
+				</div>
+				<div class="col-12 row mb-02">	
+					<div class="col-md-6">
+                        	<fieldset id="block_specifique">
+		<legend class="border-bottom mb-02">Informations spécifiques</legend>
+		<div id="infos_specifiques" class="row"></div>
+	</fieldset>
+
+                    </div>
+					<div class="col-md-6">
+						    <fieldset id="block_produit">
+        <legend class="border-bottom mb-02">Informations produits</legend>
+        <div id="infos_produit" class="row"></div>
+    </fieldset>
+
+                    </div>
+				</div>
+				<div class="col-12 row mb-02">
+					<div class="col-sm-12">
+						    <fieldset id="block_info">
+        <legend class="border-bottom mb-02">Résumé</legend>
+        <div class="row">
+            <div class="row col-sm-12">
+                <div class="col-sm-12 mb-005">
+                    <textarea id="presentation" data-libelle="resume" class="form-data form-control" name="presentation" style="resize:none;width:100%;height:150px" maxlength="2048"></textarea>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+
+					</div>
+				</div>
+				<div id="optionsBlock" class="col-sm-12 mb-02">
+					<div class="col-sm-12">
+						    <fieldset id="block_options">
+        <legend class="border-bottom mb-02">Infos supplémentaires</legend>
+        <div id="listeOptions" class="row"></div>       
+    </fieldset>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+
+    	
+	
+</div>
+<script src="https://static.epagine.fr/vendor/jquery-3.7.1.min.js"></script>
+<script src="https://static.epagine.fr/vendor/jquery-ui-1.13.3.min.js"></script>
+<script src="https://static.epagine.fr/mediaweb3/js/popper.min.js"></script>
+<script src="https://static.epagine.fr/bootstrap-5.3.8/js/bootstrap.bundle.min.js"></script>
+
+
+<script type="text/javascript" src="https://static.epagine.fr/vendor/jquery.form.min.js"></script>
+<script src="https://static.epagine.fr/mediaweb3/js/jquery.cookie.js"></script>
+
+
+<link rel="stylesheet" href="https://unpkg.com/@jarstone/dselect/dist/css/dselect.css">
+<script src="https://unpkg.com/@jarstone/dselect/dist/js/dselect.js"></script>
+
+
+
+<link rel="stylesheet" href="https://static.epagine.fr/fontawesome-pro-7.0.1-web/css/all.css">
+<link rel="stylesheet" href="https://static.epagine.fr/mediaweb3/js/plugins/farbtastic/farbtastic.css" type="text/css">
+<script type="text/javascript" src="https://static.epagine.fr/mediaweb3/js/plugins/farbtastic/farbtastic.js"></script>
+<script src="https://static.epagine.fr/mediaweb3/js/moment.min.js"></script>
+
+<!-- Datatable CSS -->
+<link rel="stylesheet" href="https://static.epagine.fr/mediaweb3/js/datatables/2.3.4/css/buttons.dataTables.min.css">
+<link rel="stylesheet" href="https://static.epagine.fr/mediaweb3/js/datatables/2.3.4/css/dataTables.bootstrap5.min.css">
+
+<!-- JS DataTables core -->
+<script src="https://static.epagine.fr/mediaweb3/js/datatables/2.3.4/js/dataTables.min.js"></script>
+<script src="https://static.epagine.fr/mediaweb3/js/datatables/2.3.4/js/dataTables.bootstrap5.min.js"></script>
+
+<!-- Datatable Buttons -->
+<script src="https://static.epagine.fr/mediaweb3/js/datatables/2.3.4/js/dataTables.buttons.min.js"></script>
+<script src="https://static.epagine.fr/mediaweb3/js/datatables/2.3.4/js/buttons.bootstrap5.min.js"></script>
+<script src="https://static.epagine.fr/mediaweb3/js/datatables/2.3.4/js/buttons.html5.min.js"></script>
+<script src="https://static.epagine.fr/mediaweb3/js/datatables/2.3.4/js/buttons.print.min.js"></script>
+
+<!-- Datatable plugins -->
+<script src="https://static.epagine.fr/mediaweb3/js/datatables/2.3.4/js/currency.js"></script>
+<script src="https://static.epagine.fr/mediaweb3/js/datatables/2.3.4/js/date-eu.js"></script>
+
+<!-- Dépendances pour export -->
+<script src="https://static.epagine.fr/mediaweb3/js/datatables/2.3.4/js/jszip.min.js"></script>
+<script src="https://static.epagine.fr/mediaweb3/js/datatables/2.3.4/js/pdfmake.min.js"></script>
+<script src="https://static.epagine.fr/mediaweb3/js/datatables/2.3.4/js/vfs_fonts.js"></script>
+
+<!-- Barcode -->
+<script type="text/javascript" src="https://static.epagine.fr/mediaweb3/js/JsBarcode.all.min.js"></script>
+
+<script type="text/javascript" src="articleBackpack.js"></script>
+<script type="text/javascript" src="gestion.js"></script>
+<script type="text/javascript" src="https://static.epagine.fr/vendor/datepicker-fr.js"></script>
+<script type="text/javascript" src="https://static.epagine.fr/vendor/jquery.datetimepicker.js"></script>
+<script src="js/script.js?v=1.1"></script>
+
+<script type="text/javascript" src="https://static.epagine.fr/vendor/bootstrap-datepicker/1.4.0/js/bootstrap-datepicker.min.js"></script>
+<script type="text/javascript" src="https://static.epagine.fr/vendor/bootstrap-datepicker/1.4.0/locales/bootstrap-datepicker.fr.min.js" charset="UTF-8"></script>
+<script type="text/javascript" src="https://static.epagine.fr/vendor/axios-0.21.min.js"></script>
+    <script type="text/javascript" src="js/loadModalSearch.js?v=1.1"></script>
+    <script type="text/javascript">
+        DataTable.defaults.column.orderSequence = ['asc', 'desc'];
+        function delete_mot_lib(gencod, typeProduit) {
+            $('#motlibraire_' + gencod + '-' + typeProduit).tooltip();
+            if (!confirm('Confirmez-vous la suppression des mots du libraire pour cet article')) {
+                return false;
+            } else {
+                var motlib = $('#motlibraire_' + gencod + '-' + typeProduit);
+                var gencod = gencod;
+
+                var bodyFormData = new FormData();
+                bodyFormData.append('del_gencod', gencod);
+
+                axios({
+                        method: "post",
+                        url: "/gestion/infoplus.php",
+                        data: bodyFormData,
+                        headers: {
+                            "Content-Type": "multipart/form-data"
+                        },
+                    })
+                    .then(response => {
+
+                        if (response.data != 'delete_error') {
+                            motlib.hide();
+                            $.ajax({
+                                url: '/gestion/ajax_motslib_gestion.php',
+                                type: 'post',
+                                data: {
+                                    arrayMag: response.data,
+                                    page: 'gestion',
+                                },
+                                beforeSend: function() {
+                                    $('.coup_coeur_list').html('<div class="loading_svg text-center"><i class="fas fa-spinner fa-pulse fa-2x"></i></div>');
+                                },
+                                success: function(data) {
+                                    $('.coup_coeur_list').html(data);
+                                    listenEvent();
+                                },
+                                error: function() {
+                                    alert('error');
+                                }
+                            });
+                        } else {
+                            alert('Erreur lors de la suppression.');
+                        }
+                    });
+                return true;
+            }
+        }
+
+        function listenEvent() {
+            $('.minMdl').mouseenter(function(e) {
+                if ($(this).find('.suppression_mdl').length !== 0)
+                    $(this).find('.suppression_mdl').show();
+            });
+            $('.minMdl').mouseleave(function(e) {
+                if ($(this).find('.suppression_mdl').length !== 0)
+                    $(this).find('.suppression_mdl').hide();
+            });
+            $('.minMdl').click(function(e) {
+                e.preventDefault();
+                if (!$(e.target).hasClass('suppression_mdl')) {
+                    var aArticleRef = $(this).attr('data-articleRef');
+                    var idmagasin = $(this).attr('data-magasin');
+                    console.log(aArticleRef);
+                    console.log(idmagasin);
+
+                    post('', {
+                        add_artRef: aArticleRef.toString(),
+                        magasinRef: idmagasin
+                    });
+                }
+            });
+            $('.suppression_mdl').click(function() {
+                if (!confirm('Confirmez-vous la suppression de tous les mots du libraire du magasin associés à cet article?')) return false;
+                else {
+                    var gencod = $(this).data('gencod');
+                    var type = $(this).data('typeprod');
+                    var magasin = $(this).data('idmagasin');
+                    $.ajax({
+                        url: '/gestion/infoplus.php',
+                        method: 'POST',
+                        data: {
+                            deletemlmag: 1,
+                            gencod: gencod,
+                            type: type,
+                            magasin: magasin
+                        },
+                        success: function(data) {
+                            if (data == 'delete_ok')
+                                $('#mdl_' + gencod + '_' + type).remove();
+                            else
+                                alert('error');
+                        },
+                        error: function(data) {
+                            alert('error');
+                        }
+                    });
+                }
+            });
+        }
+
+        $(function() {
+
+            //_____________________________________
+            //  Routing
+
+            $('[data-toggle="tooltip"]').tooltip();
+
+            
+            /* Dates pour modale recherche avancée */
+            $('.modalDate').blur(function() {
+                if ($(this).val() == '')
+                    $(this).val('JJ/MM/AAAA');
+            })
+
+        });
+        
+        // Initialisation des tooltips Bootstrap pour la description des champs
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    
+    $('#filz').change(function(){  
+        uploadImage();
+    });
+
+    $( ".datepicker" ).datepicker({
+        language: 'fr'
+    });
+
+    // Bouton sauvegarder
+    $('#article-save').click(function() {
+        if ($(this).attr('data-mbase') == '1') {
+            requestModifsFicheMBase();
+            $('#article-save').prop('disabled', true).attr('data-mbase', '0');
+            $('#can-be-upsert').val(false);
+            $('#modifArticle').prop('checked', false);
+            canBeUpsert();
+        } else {
+            $('#article-form').submit();  
+        }        
+    })
+    $( "#article-form" ).submit(function( event ) {
+        saveArticle();
+        event.preventDefault();
+        
+        return;
+    });
+        
+    // Recherche par gencod et type produit
+    $('#search-article').click(function() {
+        if (!(/^\d{13}$/.test($('#search-gencod').val()))) {
+            $('.helper, #article-form, #article-save, #article-delete, #new-article, #activeModifs').addClass('d-none');
+            $('#helper-wrong-gencod').removeClass('d-none');
+            return;
+        }
+        getArticle();
+    }); 
+
+    // Recherche gencod avec touche "Entrée"
+    $('#search-gencod').keypress((e) => {
+        if (e.which === 13) {
+            if (!(/^\d{13}$/.test($('#search-gencod').val()))) {
+                $('.helper, #article-form, #article-save, #article-delete, #new-article, #activeModifs').addClass('d-none');
+                $('#helper-wrong-gencod').removeClass('d-none');
+                return;
+            }
+            getArticle();
+        }
+    });
+
+    // Modification fiche Mediabase
+    $('#modifArticle').click(function() {
+        $('#article-save').prop('disabled', !$(this).is(':checked')).attr('data-mbase', '1');
+        $('#can-be-upsert').val($(this).is(':checked'));
+        canBeUpsert();
+        // Valeurs originales du formulaire pour comparaison
+        if ($('#formOriginal').length) {
+            $('#formOriginal').remove();
+        }
+        let formOriginal = $('<form id="formOriginal"></form>');
+        $(formOriginal).insertBefore('#article-form');
+        $('.form-data').not('[disabled]').each(function() {
+            let name = $(this).attr('id');
+            if (name == 'presentation') {
+                $('#formOriginal').append(`<textarea id="original_presentation" name="original_presentation" hidden>`);
+                $('#original_presentation').val($(this).val().trim());
+            } else {
+                $('#formOriginal').append(`<input type="hidden" id="original_` + name + `"  name="original_` + name + `" value="` + $(this).val().trim() + `">`);
+            }
+        });
+        $('#formOriginal').append('<input type="hidden" id="original_file-cover" name="original_file-cover" value="' + $('#file-cover').attr('src').trim() +'">');
+    });
+
+    // Nouvel article
+    $('#new-article').click(function() {
+        newArticle();
+    }); 
+
+    $('#article-delete').click(function() {
+        if (confirm("Confirmez-vous la suppression? Cette opération est définitive.")) {
+            $('#search-loader').removeClass('d-none');
+            $('.helper, #article-form, #article-save, #article-delete').addClass('d-none');
+            axios
+            .get('/gestion/api/articles.php', {
+                params: {
+                    action : 'deleteArticle',
+                    gencod: $('#search-gencod').val()                 
+                },
+                responseType: 'json'
+            })
+            .then(response => {
+                $('#search-loader').addClass('d-none');
+                if (!response.data.isDelete) {
+                    $("#helper-delete-error").removeClass('d-none');     
+                } else {
+                    $("#helper-delete-ok").removeClass('d-none');               
+                }
+            });
+        }
+    })
+});
+
+function lectoratChange() {
+    let OptionVal = $(`#lectorat option:selected`).val(); 
+    let OptionLibelle = $(`#lectorat option:selected`).html();   
+    if ($('#lectorat_id').length) {
+        $('#lectorat_id').remove();
+        $('#lectorat_libelle').remove();
+    }
+    if (OptionVal) {
+        $('#article-form').prepend(`<input type="hidden" id="lectorat_id" class="form-data" name="lectorat_id" value="${OptionVal}">`);
+        $('#article-form').prepend(`<input type="hidden" id="lectorat_libelle" class="form-data" name="lectorat_libelle" value="${OptionLibelle}">`);
+    }   
+}
+
+function codeSupportChange() {
+    $('input[name="code_support"]').val($(`#listeCodeSupport`).val());
+}
+
+function hydrateArticle(article) {
+    // Type 1 associé au papier en base Medialivre
+    if (article.typeProduit === 0) {
+		article.typeProduit = 1;
+	}
+    for (const [attribute, value] of Object.entries(article)) {        
+        let field = attribute.replace(/[A-Z]/g, s => '-' + s.toLowerCase());
+        if (field.startsWith('mot-cle')) {
+            field = field.replace('mot-cle', 'mot-cle-');
+        }
+        let finalValue = value ?? '';
+        $(`#${field}`).val(finalValue);
+        if ($(`#${field}`).length && ($(`#${field}`).attr('type') == 'date')) {
+            if (value) {
+                $(`#${field}`).val(moment(value).format('YYYY-MM-DD'));
+            }
+        }      
+    };
+    $('#produit_type').val($('#selectionType option:selected').text().trim());
+    $('#type-produit').val($('#selectionType').val());
+    for (let i = 0 ; i < 5 ; i++) {
+        $(`#auteur-${parseInt(i)}`).val('');
+        $(`#auteur-${parseInt(i)}`).addClass('d-none');
+        $(`#realisateur-${parseInt(i)}`).val('');
+        $(`#realisateur-${parseInt(i)}`).addClass('d-none');
+        $(`#interprete-${parseInt(i)}`).val('');
+        $(`#interprete-${parseInt(i)}`).addClass('d-none');
+    }    
+    if (article.auteurs) {
+        for (const [key, auteur] of Object.entries(article.auteurs)) {
+            $(`#auteur-${parseInt(key)}`).val(auteur);
+            $(`#auteur-${parseInt(key)}`).removeClass('d-none');
+        }
+    } else {
+        $('.article-auteurs').val(null)
+        $('.article-auteurs').addClass('d-none');
+        $(`#auteur-0`).removeClass('d-none');
+    }
+    if (article.realisateurs) {
+        for (const [key, realisateur] of Object.entries(article.realisateurs)) {   
+            $(`#realisateur-${parseInt(key)}`).val(realisateur);
+            $(`#realisateur-${parseInt(key)}`).removeClass('d-none');
+        }
+    } else {
+        $('.article-realisateurs').val(null)
+        $('.article-realisateurs').addClass('d-none');
+        $(`#realisateur-0`).removeClass('d-none');
+    }
+    if (article.interpretes) {
+        for (const [key, interprete] of Object.entries(article.interpretes)) {   
+            $(`#interprete-${parseInt(key)}`).val(interprete);
+            $(`#interprete-${parseInt(key)}`).removeClass('d-none');
+        }
+    } else {
+        $('.article-interpretes').val(null)
+        $('.article-interpretes').addClass('d-none');
+        $(`#interprete-0`).removeClass('d-none');
+    }
+
+    $('#prix-ttc').val(article.prix / 100);
+    $('#prix-ht').val(article.prixHt / 100);
+    if (article.tvaCode) {
+        $('#tva').val(article.tvaCode);
+    }
+    $('#lectorat option').filter(function () { return $(this).html() == article.lectoratLibelle; }).prop('selected', true);
+    let boolList = {
+        'broche' : 'broche', 
+        'illustre' : 'illustre', 
+        'multilangue' : 'multilangue', 
+        'impression_a_la_demande' : 'impressionALaDemande',
+        'scolaire' : 'scolaire', 
+        'luxe' : 'luxe', 
+        'grands_caracteres' : 'grandsCaracteres', 
+        'livre_lu' : 'livreLu', 
+        'relie' : 'relie',
+        'pilesIncluses': 'pilesIncluses',
+        'impermeable': 'impermeable',
+        'lavable': 'lavable',
+        'poignee': 'poignee'
+    }
+    for (const [name, property] of Object.entries(boolList)) {    
+        if ($(`input[name='${name}']`).length) {
+            $(`input[name='${name}']`).prop('checked', article[property]);
+            $(`input[name='${name}']`).val(article[property] ? true : false); 
+        } 
+    };
+    lectoratChange();
+    codeSupportChange(article.typeProduit);
+}
+
+function getArticle() {
+    $('#search-loader').removeClass('d-none');
+    $('#activeModifs').addClass('d-none');
+    $('.helper, #article-form, #article-save, #article-delete').addClass('d-none');
+    $('#article-save').attr('data-mbase', '0');
+    if ($('#new_image').length) {
+        $('#new_image').remove();
+    }    
+    axios
+        .get('/gestion/api/articles.php', {
+            params: {
+                action : 'getArticle',
+                gencod: $('#search-gencod').val(),
+                typeProduit: $('#selectionType').val() 
+            },
+            responseType: 'json'
+        })
+        .then(response => {
+            $('#search-loader').addClass('d-none');            
+            if (response.data && (response.data.article.typeProduit === 0 || response.data.article.typeProduit === '')) {
+                response.data.article.typeProduit = 1;
+            }
+            getFormSpecifsProduit(response, 'get');               
+        })        
+}
+
+function newArticle() {
+    $('#new-loader').removeClass('d-none');
+    $('.helper, #article-form, #article-save, #article-delete').addClass('d-none');
+    $('#file-cover').attr('src', 'https://images.epagine.fr/000/0000000000000_jm.jpg' + '?' + new Date().getTime());
+    axios
+        .get('/gestion/api/articles.php', {
+            params: {
+                action : 'newArticle',
+                gencod: $('#search-gencod').val(),
+                typeProduit: $('#selectionType').val() ?? 1
+            },
+            responseType: 'json'
+        })
+        .then(response => {            
+            $('#new-loader').addClass('d-none');
+            if (response.data && (response.data.article.typeProduit === 0 || response.data.article.typeProduit === '')) {
+                response.data.article.typeProduit = 1;
+            }            
+            getFormSpecifsProduit(response, 'save');
+        });
+}
+
+function saveArticle() {
+    let payload = {};
+    $('.form-data').not('[disabled]').each(function() {
+        let name = $(this).attr('name');
+        payload[name] = $(this).val();
+    });
+    $('.helper').addClass('d-none');
+
+    $('#save-loader').removeClass('d-none');
+    axios
+    .post('/gestion/api/articles.php?action=saveArticle', {
+        data: payload,
+    })
+    .then(response => {
+        $('#save-loader').addClass('d-none');
+        if (!response.data || response.data.isError) {
+            $("#helper-save-error").removeClass('d-none');     
+        } else {
+            $("#helper-save-ok").removeClass('d-none');               
+        }
+    });
+}
+
+function requestModifsFicheMBase() 
+{
+    let payload = {};
+    $('.helper').addClass('d-none');
+    $('.form-data').not('[disabled]').each(function() {
+        let name = $(this).attr('id');
+        let keyLibelle = $(this).attr('data-libelle');
+        if (name != 'image') {
+            if ($('#original_' + name).length && $('#original_' + name).val().trim() != $(this).val().trim()) {
+                payload[keyLibelle] = $(this).val();
+            }
+        }        
+    });
+    if ($('#newImage').length) {
+        payload["newImage"] = 1;
+        payload["image"] = 1;
+    }  
+    if (!$.isEmptyObject(payload)) {
+        $('#save-loader').removeClass('d-none');
+        payload['typeProduit'] = $('#selectionType').val();
+        payload['gencod'] = $('#search-gencod').val();
+        payload['titreArticle'] = $('#original_titre').val();
+        payload['action'] = 'modifsFicheMbase';
+        axios
+        .post('/gestion/articles.php', {
+            data: payload,
+            responseType: 'text'
+        })
+        .then(response => {
+            $('#save-loader').addClass('d-none');
+            if (response.data == '1') {
+                $("#helper-modif-mbase-ok").removeClass('d-none');     
+            } else {
+                $("#helper-save-error").removeClass('d-none');               
+            }
+        });
+    } else {
+        alert("Aucune nouvelle information par rapport à la fiche actuelle");
+    }
+    
+}
+
+function getFormSpecifsProduit(objArticle, action)
+{
+    $('#infos_specifiques').html('');
+    $('#infos_produit').html('');
+    $('#listeOptions').html('');
+    $('#optionsBlock').hide().find('input, select').prop('disabled', true);
+    axios
+        .get('/gestion/articles.php', {
+            params: {
+                getFormType : objArticle.data.article.typeProduit
+            },
+            responseType: 'text'
+        })
+        .then(response => {
+            let parseData = $($.parseHTML(response.data));        
+            $('#infos_specifiques').append(parseData.find('#infos_specifiques').html());
+            $('#infos_produit').append(parseData.find('#infos_produit').html());
+            if (hasOptions(objArticle.data.article)) {
+                $('#listeOptions').append(parseData.find('#listeOptions').html());
+                $('#optionsBlock').show().find('input, select').prop('disabled', false);
+            } else {
+                $('#listeOptions').html('');
+                $('#optionsBlock').hide();
+            }            
+            returnJsonData(objArticle.data, action);        
+        });        
+}
+
+function hasOptions(article)
+{
+    let typeWithOptions = [1, 5, 6];
+    let result = (jQuery.inArray(parseInt(article.typeProduit), typeWithOptions) != -1) ? true : false;
+    return result;
+}
+
+function returnJsonData(data, action) {       
+    
+    if (data.isArticleApiExists) {
+        $('#baseApiExist').text(data.typeArticleExists);
+        $('#helper-type-api-exist').removeClass('d-none');
+        return;
+    }    
+    if (data.isArticleForbidden) {
+        $('#baseUnauthorized').text(data.typeArticleExists);
+        $('#helper-unauthorized-type').removeClass('d-none');
+        return;
+    } 
+    if (data.isArticleExists) {
+        $('#otherType').text(data.typeArticleExists);
+        $('#helper-exist').removeClass('d-none');
+        return;
+    }    
+    if (data.article.gencod == null) {
+        $('#helper-not-found').removeClass('d-none');
+        $('#new-article').removeClass('d-none');
+        return;
+    }
+    if (data.isGencodError) {
+        $('#helper-wrong-gencod').removeClass('d-none');
+        if (action == 'save') {
+            $('#new-article').removeClass('d-none');
+        }
+        return;
+    }
+    if (data.isApiError) {
+        $('#helper-process-error').removeClass('d-none');
+        return;
+    }
+    $('#article-save').removeClass('d-none'); 
+    if (!data.canBeUpsert) {
+        $('#modifArticle').prop('checked', false);
+        $('#activeModifs').removeClass('d-none');
+    }  
+    $('#article-save').prop('disabled', !data.canBeUpsert);    
+    if (action == 'get') {
+        $('#new-article').addClass('d-none');
+    }
+    if (data.canBeDelete || action == 'save') {        
+        $('#article-delete').removeClass('d-none');
+        $('#article-delete').prop('disabled', !data.canBeDelete);
+    }
+    hydrateArticle(data.article);
+    $('#can-be-upsert').val(action == 'save' ? true : data.canBeUpsert);
+    $('#can-be-delete').val(action == 'save' ? true : data.canBeDelete);
+    $('#is-new').val(action == 'save' ? true : data.isNew);
+    if (action == 'get') {
+        $('#file-cover').attr('src', data.article.imageUrl + '?' + new Date().getTime());
+    }
+    if (action == 'save') {
+        $('#date-creation').val(moment().format('YYYY-MM-DD'));
+        $('#date-modification').val(moment().format('YYYY-MM-DD'));
+    }
+    canBeUpsert();
+    getGtlList(1, false);
+    calculPrixHT();
+    if (data.article.typeProduit == 1) {
+        profession('auteur');
+    } else if (data.article.typeProduit == 3) {
+        profession('realisateur');
+        profession('interprete');
+    }
+    getListeCodeSupport(data.article.codeSupport);
+    $('#article-form').removeClass('d-none');
+}
+
+function getListeCodeSupport(codeSupport) {
+    axios
+        .get('/gestion/api/articles.php', {
+            params: {
+                action : 'getCodeSupport',
+                typeProduit: $('#type-produit').val()
+            },
+            responseType: 'json'
+        })
+        .then(response => {            
+            if (response.data.codeSupport) {
+                let optionsArray = response.data.codeSupport;
+                $('#listeCodeSupport option').each(function() {
+                    $(this).remove();
+                });
+                $.each(optionsArray, function(i) {
+                    select = (codeSupport && i == codeSupport) ? true : false;
+                    $('#listeCodeSupport').append(new Option(optionsArray[i], i, select, select));
+                });
+            }
+        });
+}
+
+function canBeUpsert() {
+    let canBeUpsert = $('#can-be-upsert').val() == 'true' ? true : false;
+    let idList = [];    
+    $('#block_generique input, #block_prix input, #block_specifique input, #block_produit input, #block_info input, #block_options input').each(function(){
+        idList.push($(this).attr('id'));
+    });
+    $('#block_generique select, #block_prix select, #block_specifique select, #block_produit select, #block_info select, #block_options select').each(function(){
+        idList.push($(this).attr('id'));
+    });
+    $('#block_generique textarea, #block_prix textarea, #block_specifique textarea, #block_produit textarea, #block_info textarea, #block_options textarea').each(function(){
+        idList.push($(this).attr('id'));
+    });
+    for (const [key, id] of Object.entries(idList)) { 
+        if (id != 'produit_type') {
+            $(`#${id}`).prop('disabled', canBeUpsert ? false : true);
+        } 
+    }
+    $('#date-modification').prop('readonly', canBeUpsert ? false : true);
+    if (canBeUpsert) {
+        $("#file-cover-dl-icon").removeClass('d-none');
+    } else {
+        $("#file-cover-dl-icon").addClass('d-none');
+    }
+}
+
+function profession(metier, action) {
+    let canBeUpsert = $('#can-be-upsert').val() == 'true' ? true : false;
+    let lastAddId = 0;
+    let lastDeleteId = 0;
+    $(`.article-${metier}s`).each(function() {
+        if ($(this).val()) {
+            $(this).removeClass('d-none');
+            lastAddId++;    
+        }
+        if (!$(this).hasClass('d-none')) {
+            lastDeleteId++;
+        }
+    });
+    if (lastAddId == 4 && lastAddId == lastDeleteId - 1) {
+        $(`#${metier}-btn-add`).addClass('d-none');
+    } else {
+        $(`#${metier}-btn-add`).removeClass('d-none');
+    }
+    if (lastDeleteId <= 1) {
+        $(`#${metier}-btn-delete`).addClass('d-none');
+    } else {
+        $(`#${metier}-btn-delete`).removeClass('d-none');       
+    }
+    if (!canBeUpsert) {
+        $(`#${metier}-btn-add`).addClass('d-none');
+        $(`#${metier}-btn-delete`).addClass('d-none'); 
+    } else {
+        $(`#${metier}-btn-add`).remove('d-none');
+        $(`#${metier}-btn-delete`).remove('d-none');       
+    }    
+    if (action == 'add') { 
+        $(`#${metier}-${lastAddId}`).removeClass('d-none');
+        profession(metier);      
+    }
+    if (action == 'delete' && lastDeleteId > 0) {        
+        $(`#${metier}-${lastDeleteId - 1}`).addClass('d-none'); 
+        $(`#${metier}-${lastDeleteId - 1}`).val('');
+        profession(metier);
+    }
+}
+
+function getGtlList(rank, isNew = true) {
+    if (!hasTypeWithGtl($('#selectionType').val())) {
+        return;
+    }
+    if (isNew) {
+        $('input[name="code_rayon"]').val(null);
+    }
+    let rankLevel = 1;
+    $('.code-rayon').each(function() {
+        if (rankLevel >= rank) {
+            $(this).addClass('d-none');
+            $(`#code-rayon-rank-${rankLevel} option`).remove();
+        }
+        rankLevel++;
+    });
+    axios
+    .get('/gestion/api/articles.php', {
+        params: {
+            action : 'getGtlList',
+            gtl: $(`#code-rayon-rank-${ rank - 1 }`).val() ? $(`#code-rayon-rank-${ rank - 1 }`).val() : null ,
+            typeProduit: $('#type-produit').val()            
+        },
+        responseType: 'json'
+    })
+    .then(response => {
+        if (response.data) {
+            let rankLevel = 1;
+            $('.code-rayon').each(function() {
+                if (rankLevel <= rank) {
+                    $(this).removeClass('d-none');    
+                }
+                rankLevel++;
+            });
+
+            if (Object.keys(response.data).length == 0) {
+                $(`#code-rayon-rank-${rank}`).addClass('d-none');
+            }
+
+            for (const [key, value] of Object.entries(response.data)) {
+                if (value) {
+                    $(`#code-rayon-rank-${rank}`).append($('<option>', {
+                        value: value.code,
+                        text: value.lib
+                    }));
+                }
+            } 
+
+            checkGtlFromRank(rank);  
+
+            if (!$('input[name="code_rayon"]').val()) {
+                if (Object.keys(response.data).length == 0) {
+                    $('input[name="code_rayon"]').val($(`#code-rayon-rank-${ rank - 1 }`).val())
+                } else {
+                    $('input[name="code_rayon"]').val($(`#code-rayon-rank-${ rank }`).val())
+                }
+            }
+        }
+    });
+}
+
+function hasTypeWithGtl(type) {
+    let arrayWithGtl = [0, 1, 3, 4];
+    return (jQuery.inArray(parseInt(type), arrayWithGtl) != -1) ? true : false;
+}
+
+function checkGtlFromRank(rank) {
+    let isCodeOk = false;
+    let code = getGtlRankCodeFromRank(rank);
+
+    let i = 0 ;
+    if ($(`#code-rayon-rank-${rank} option[value='${code}']`).length > 0) {
+        $(`#code-rayon-rank-${rank}`).val(code);
+    }
+
+    if (code != $('input[name="code_rayon"]').val()) {
+        getGtlList(parseInt(rank) + 1, false);
+    }
+}
+
+function getGtlRankCodeFromRank(rank) {
+    let codeFull = $('input[name="code_rayon"]').val();
+    let codeSliced = codeFull.toString().slice(0, rank*2);
+
+    return (codeSliced.padEnd(codeFull.length, 0))
+}
+
+function getCtlList(rank = 1) {
+    let rankLevel = 1;
+    $('.code-langue').each(function() {
+        if (rankLevel >= rank) {
+            $(this).addClass('d-none');
+            $(`#code-langue-rank-${rankLevel} option`).remove();
+        }
+
+        rankLevel++;
+
+    });
+
+    axios
+    .get('/gestion/api/articles.php', {
+        params: {
+            action : 'getCtlList',
+            ctl: $(`#code-langue-rank-${ rank - 1 }`).val() ? $(`#code-langue-rank-${ rank - 1 }`).val() : null ,
+        },
+        responseType: 'json'
+    })
+    .then(response => {
+
+        let rankLevel = 1;
+        $('.code-langue').each(function() {
+            if (rankLevel <= rank) {
+                $(this).removeClass('d-none');    
+            }
+            rankLevel++;
+
+        });
+        
+        if (response.data.length == 0) {
+        
+            $(`#code-langue-rank-${rank}`).addClass('d-none');
+        }
+
+        for (const [key, value] of Object.entries(response.data)) {
+
+            $(`#code-langue-rank-${rank}`).append($('<option>', {
+                value: value.code_ctl,
+                text: value.libelle
+            }));
+        } 
+
+    });
+}
+
+function calculPrixHT() {
+    let tva = $('#tva option:selected').text();
+    $('input[name="tva_taux"]').val($('#tva option:selected').text());
+    $('input[name="tva_code"]').val($('#tva option:selected').val());
+
+    let prixTTC = $('#prix-ttc').val();
+    let prixHT = (prixTTC - (prixTTC / 100) * tva).toFixed(2);
+
+    $('#prix-ht').val(prixHT);
+}
+
+function uploadImage() {
+    var fileIn = $('#filz').prop('files');
+    
+    var size = fileIn[0].size;
+    var name = fileIn[0].name;
+    var idProgress = name.split('.')[0]+size;
+
+    var formData = new FormData();
+    formData.append('file-cover', fileIn[0]);
+
+    $.ajax({
+        url:'/gestion/api/articles.php?action=uploadImage&gencod=' + $('#gencod').val(),
+        type: 'POST',
+        xhr: function() {
+            var xhr = new window.XMLHttpRequest();
+            xhr.upload.addEventListener("progress", function(evt) {
+                if (evt.lengthComputable) {
+                    var percentComplete = ((evt.loaded / evt.total) * 100) - 1;
+                }
+            }, false);
+
+            return xhr;
+        },
+        data: formData,
+        contentType: false,
+        cache: false, 
+        processData: false,
+
+        beforeSend: function() {
+            
+        },
+
+        success: function(data) {
+            $("#file-cover").attr("src", data + '?' + new Date().getTime());
+            $('input[name="cover"]').val(data);
+            $('<input type="hidden" id="newImage" class="form-data" name="newImage" value="1">').insertAfter( '#image');            
+        }
+    });
+}
+</script></div></div></body></html>

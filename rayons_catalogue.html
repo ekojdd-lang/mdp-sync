@@ -1,0 +1,811 @@
+<!DOCTYPE html><html><head>
+  <!--// ACS4WWW8 | 5499 |  //-->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/x-icon" href="https://static.epagine.fr/mediaweb3/5499/favicon.ico">
+  <title>Interface de gestion du site de la librairie : Maison de la Presse Gabon</title>
+  <meta name="robots" content="noindex,nofollow">
+    <link rel="stylesheet" href="https://static.epagine.fr/bootstrap-5.3.8/css/bootstrap.min.css">
+  <!--<link rel="stylesheet" type="text/css" href="/gestion/js/plugins/BeatPicker-master/css/BeatPicker.css">-->
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	<link href="css/plugins/datetimepicker-master/jquery.datetimepicker.css" rel="stylesheet">
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+      <link href="//netdna.bootstrapcdn.com/respond-proxy.html" id="respond-proxy" rel="respond-proxy">
+      <link href="js/respond.proxy.gif" id="respond-redirect" rel="respond-redirect">
+      <script src="js/respond.proxy.js"></script>
+    <![endif] -->
+	<link rel="stylesheet" href="https://static.epagine.fr/vendor/bootstrap-datepicker/1.4.0/css/bootstrap-datepicker3.min.css" type="text/css">
+  <link href="css/style.css?v=1.0" rel="stylesheet">
+  <link href="css/bootstrap-side-modals.css" rel="stylesheet">
+  <link href="css/print.css" rel="stylesheet">
+  <link href="css/gestion_bs.css?v=DWF-6372" rel="stylesheet">
+</head>
+<body>
+<div id="myModalGestion" class="modal inmodal fade" aria-hidden="true" role="dialog" tabindex="-1" style="display:none">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+    </div>
+  </div>
+</div>
+
+<div id="myModalContact" class="modal inmodal fade" aria-hidden="true" role="dialog" tabindex="-1" style="display:none">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+    </div>
+  </div>
+</div>
+
+<div id="myModalMd" class="modal inmodal fade" aria-hidden="true" role="dialog" tabindex="-1" style="display:none">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+    </div>
+  </div>
+</div>
+
+<div class="modal" tabindex="-1" id="modal_responsive_scrollable">
+    <div class="modal-dialog modal-xl modal-fullscreen-lg-down modal-dialog-scrollable">
+        <div class="modal-content"></div>
+    </div>
+</div>
+        
+<div class="modal right fade" id="modaleHelp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header bg-transparent">
+        <h4 class="modal-title fw-bold h5 mt-4" id="myModalLabel2">Aide</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <ul>
+                            <li><a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined" target="_blank">Création de table</a>
+                            </li><li><a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined" target="_blank">Liens sur le site</a>
+                            </li><li><a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined" target="_blank">Type de table</a>
+                            </li><li><a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined" target="_blank">Format infos table</a>
+                            </li><li><a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined" target="_blank">Options</a>
+                            </li><li><a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined" target="_blank">En ligne / Hors ligne</a>
+                            </li><li><a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined" target="_blank">Nombre d'articles affichés</a>
+                                    
+        </li></ul>
+      </div>
+      <div class="modal-footer">
+        <a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined" target="_blank">Documentation générale</a>
+      </div>
+    </div><!-- modal-content -->
+  </div><!-- modal-dialog -->
+</div><!-- modal -->
+
+<div id="wrapper" class="d-flex">
+<div id="MODAL-SEARCHA" class="modal"></div>
+<nav class="navbar-static-side">
+    <ul class="nav">
+        <li>
+            <div class="nav-header profile-element">
+                                <span class="d-flex justify-content-between">
+                    <a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined" class="pull-right">
+                        <img src="https://static.epagine.fr/mediaweb3/5499/logo_mdpgabon.png">
+                    </a>
+                </span>
+                                <a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined" class="min">
+                    <span class="mt-1"> 
+                         <strong class="font-bold">ROLAND DOVALE</strong>
+                    </span> 
+                    <span class="mail">ipc369@yahoo.fr</span> 
+                </a>
+                                                                                        
+            </div>
+        </li>
+        <div class="liens" id="nav_accordion">
+                                                    <li>
+                    <a id="mise_en_ligne" href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined" target="_blank" rel="noopener">
+                        <i class="far fa-sync"></i>
+                        <button class="btn btn-primary min ms-3" type="button">Mettre en ligne</button>
+                    </a>
+                </li>
+                                                
+                                                                                                                                                                                                                                                                                                                                                
+                <li>
+                                                                <a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined" data-bs-toggle="collapse" data-bs-target="#menu_0">
+                            <i class="far fa-store"></i>                            <span class="nav-label min">Magasin</span>
+                            <span class="fa fa-angle-right fa-pull-right"></span>
+                        </a>
+                        <ul class="submenu collapse" id="menu_0" data-bs-parent="#nav_accordion">
+                                                            <li>
+                                    <a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined">
+                                                                                Infos pratiques
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined">
+                                                                                Infos commerciales
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined">
+                                                                                Graphisme
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined">
+                                                                                Tarifs de livraison
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined">
+                                                                                Compte
+                                    </a>
+                                </li>
+                                                    </ul>
+                                                        </li>
+            
+                                                                                
+                <li>
+                                                                <a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined">
+                            <i class="far fa-memo-circle-info"></i>                            <span class="nav-label min">Aide</span>
+                        </a>
+                                    </li>
+            
+                                                                                
+                <li>
+                                                                <a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined" target="_blank" rel="noopener">
+                            <i class="far fa-image"></i>                            <span class="nav-label min">Banque d'images (téléversement)</span>
+                        </a>
+                                    </li>
+            
+                                                                                                                                                                                                                                                                
+                <li class="active">
+                                                                <a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined" data-bs-toggle="collapse" data-bs-target="#menu_3" aria-expanded="true">
+                            <i class="far fa-database"></i>                            <span class="nav-label min">Base de données</span>
+                            <span class="fa fa-angle-right fa-pull-right fa-rotate-90"></span>
+                        </a>
+                        <ul class="submenu collapse show" id="menu_3" data-bs-parent="#nav_accordion">
+                                                            <li>
+                                    <a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined">
+                                                                                Création Articles
+                                    </a>
+                                </li>
+                                                            <li class="active">
+                                    <a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined">
+                                                                                Rayons Medialog/Internet
+                                    </a>
+                                </li>
+                                                    </ul>
+                                                        </li>
+            
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+                <li>
+                                                                <a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined" data-bs-toggle="collapse" data-bs-target="#menu_4">
+                            <i class="far fa-home"></i>                            <span class="nav-label min">Animations (de la page d'accueil)</span>
+                            <span class="fa fa-angle-right fa-pull-right"></span>
+                        </a>
+                        <ul class="submenu collapse" id="menu_4" data-bs-parent="#nav_accordion">
+                                                            <li>
+                                    <a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined">
+                                                                                Édito
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined">
+                                                                                Sliders
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined">
+                                                                                Bandeau accueil
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined">
+                                                                                Blocs et tables
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined">
+                                                                                Menu personnalisé
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined">
+                                                                                Rayons magasin
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined">
+                                                                                Palmarès
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined">
+                                                                                Zones libres colonnes
+                                    </a>
+                                </li>
+                                                    </ul>
+                                                        </li>
+            
+                                                                                
+                <li>
+                                                                <a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined">
+                            <i class="far fa-memo"></i>                            <span class="nav-label min">Pages libres</span>
+                        </a>
+                                    </li>
+            
+                                                                                
+                <li>
+                                                                <a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined">
+                            <i class="far fa-table-tree"></i>                            <span class="nav-label min">Onglets</span>
+                        </a>
+                                    </li>
+            
+                                                                                
+                <li>
+                                                                <a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined">
+                            <i class="far fa-calendar"></i>                            <span class="nav-label min">Agenda</span>
+                        </a>
+                                    </li>
+            
+                                                                                                                                                                                                            
+                <li>
+                                                                <a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined" data-bs-toggle="collapse" data-bs-target="#menu_8">
+                            <i class="far fa-message-heart"></i>                            <span class="nav-label min">Coups de coeur</span>
+                            <span class="fa fa-angle-right fa-pull-right"></span>
+                        </a>
+                        <ul class="submenu collapse" id="menu_8" data-bs-parent="#nav_accordion">
+                                                            <li>
+                                    <a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined">
+                                                                                Gestion des coups de coeur
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined">
+                                                                                Gestion des rédacteurs
+                                    </a>
+                                </li>
+                                                    </ul>
+                                                        </li>
+            
+                                                                                                                                                                                                                                                        
+                <li>
+                                                                <a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined" data-bs-toggle="collapse" data-bs-target="#menu_9">
+                            <i class="far fa-money-bill-trend-up"></i>                            <span class="nav-label min">Ventes</span>
+                            <span class="fa fa-angle-right fa-pull-right"></span>
+                        </a>
+                        <ul class="submenu collapse" id="menu_9" data-bs-parent="#nav_accordion">
+                                                            <li>
+                                    <a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined">
+                                                                                Gestion des paniers
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined">
+                                                                                Détails des ventes par article
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined">
+                                                                                Statistiques
+                                    </a>
+                                </li>
+                                                    </ul>
+                                                        </li>
+            
+                                                                                                                                                                                                            
+                <li>
+                                                                <a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined" data-bs-toggle="collapse" data-bs-target="#menu_10">
+                            <i class="far fa-user"></i>                            <span class="nav-label min">Clients</span>
+                            <span class="fa fa-angle-right fa-pull-right"></span>
+                        </a>
+                        <ul class="submenu collapse" id="menu_10" data-bs-parent="#nav_accordion">
+                                                            <li>
+                                    <a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined">
+                                                                                Clients Particuliers
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined">
+                                                                                Clients pro
+                                    </a>
+                                </li>
+                                                    </ul>
+                                                        </li>
+            
+                                                                                                                                                                                                                                                                                                    
+                <li>
+                                                                <a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined" data-bs-toggle="collapse" data-bs-target="#menu_11">
+                            <i class="far fa-hashtag"></i>                            <span class="nav-label min">Réseaux/SEO</span>
+                            <span class="fa fa-angle-right fa-pull-right"></span>
+                        </a>
+                        <ul class="submenu collapse" id="menu_11" data-bs-parent="#nav_accordion">
+                                                            <li>
+                                    <a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined">
+                                                                                Réseaux sociaux
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined" target="_blank" rel="noopener">
+                                                                                Google analytics
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined">
+                                                                                Mots clés
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined">
+                                                                                FAQ Clients
+                                    </a>
+                                </li>
+                                                    </ul>
+                                                        </li>
+            
+                                                                                                                                                                                                                                                        
+                <li>
+                                                                <a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined" data-bs-toggle="collapse" data-bs-target="#menu_12">
+                            <i class="far fa-percent"></i>                            <span class="nav-label min">Promotions</span>
+                            <span class="fa fa-angle-right fa-pull-right"></span>
+                        </a>
+                        <ul class="submenu collapse" id="menu_12" data-bs-parent="#nav_accordion">
+                                                            <li>
+                                    <a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined">
+                                                                                Mes promotions
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined">
+                                                                                Promotions numériques éditeurs
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined">
+                                                                                Remises
+                                    </a>
+                                </li>
+                                                    </ul>
+                                                        </li>
+            
+                                                                                                                                                                
+                <li>
+                                                                <a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined" data-bs-toggle="collapse" data-bs-target="#menu_13">
+                            <i class="far fa-rectangle-pro"></i>                            <span class="nav-label min">Fonctions pro</span>
+                            <span class="fa fa-angle-right fa-pull-right"></span>
+                        </a>
+                        <ul class="submenu collapse" id="menu_13" data-bs-parent="#nav_accordion">
+                                                            <li>
+                                    <a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined">
+                                                                                Suivi de commande Medialog
+                                    </a>
+                                </li>
+                                                    </ul>
+                                                        </li>
+            
+                                                                                                                                                                                                            
+                <li>
+                                                                <a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined" data-bs-toggle="collapse" data-bs-target="#menu_14">
+                            <i class="far fa-scale-balanced"></i>                            <span class="nav-label min">RGPD</span>
+                            <span class="fa fa-angle-right fa-pull-right"></span>
+                        </a>
+                        <ul class="submenu collapse" id="menu_14" data-bs-parent="#nav_accordion">
+                                                            <li>
+                                    <a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined">
+                                                                                Traitements
+                                    </a>
+                                </li>
+                                                            <li>
+                                    <a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined">
+                                                                                Accessibilité
+                                    </a>
+                                </li>
+                                                    </ul>
+                                                        </li>
+            
+                                                                                                                                                                
+                <li>
+                                                                <a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined" data-bs-toggle="collapse" data-bs-target="#menu_15">
+                            <i class="far fa-book-arrow-up"></i>                            <span class="nav-label min">Catalogue numérique</span>
+                            <span class="fa fa-angle-right fa-pull-right"></span>
+                        </a>
+                        <ul class="submenu collapse" id="menu_15" data-bs-parent="#nav_accordion">
+                                                            <li>
+                                    <a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined">
+                                                                                Informations sur le catalogue PNB
+                                    </a>
+                                </li>
+                                                    </ul>
+                                                        </li>
+                    </div>
+    </ul>
+</nav><div id="page-wrapper" class="d-block">
+  <div class="header-nav">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light" role="navigation">
+          <div class="row mx-3">
+              <a class="btn btn-primary " href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined" title="Menu gestion" id="btn_gestion"><i class="fa fa-bars"></i></a>
+          </div>
+          <ul class="navbar-nav navbar-right">
+              <li class="nav-item">
+                <h1 class="mb-0 welcome-message">Interface de gestion : www.maisondelapressegabon.com</h1>
+              </li>
+              <li class="nav-item">
+                <a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=undefined">
+                  <i class="fa fa-sign-out"></i> Déconnexion                </a>
+              </li>
+                                      </ul>
+      </nav>
+  </div>
+
+  <!-- 
+  NOT IN INSPINIA ORIGINAL TEMPLATE
+  <div class="wrapper wrapper-content animated fadeInRight">
+      <div class="row">
+          <div class="col-lg-12"> -->
+
+<div class="row my-4">
+    <div>
+        <h2>Rayons catalogue</h2>
+    </div>
+</div>
+
+<div class="card clearfix border-0">
+    <div class="card-body col-md-12">
+
+                            <p id="select_base" class="col-md-3 mb-3">
+                        
+                        <select id="combobase" title="Rechercher" name="base" data-typeprod="get_base" class="form-select">
+                                
+                                <option value="paper">Livres</option>
+                                
+                                <option value="jouet">Jeux - Jouets</option>
+                                
+                                <option value="papeterie">Papeterie</option>
+                                
+                                <option value="divers">Produits complémentaires</option>
+                                                </select>
+                    </p>			
+                    <div id="rayonsMedialog_wrapper" class="dt-container dt-bootstrap5 dt-empty-footer"><div class="row mt-2 justify-content-between"><div class="d-md-flex justify-content-between align-items-center dt-layout-start col-md-auto me-auto"><div class="dt-length"><label for="dt-length-0">Afficher <select aria-controls="rayonsMedialog" class="form-select form-select-sm" id="dt-length-0"><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> Résultats</label></div></div><div class="d-md-flex justify-content-between align-items-center dt-layout-end col-md-auto ms-auto"><div class="dt-search"><label for="dt-search-0">Rechercher&nbsp;:</label><input type="search" class="form-control form-control-sm" id="dt-search-0" placeholder="" aria-controls="rayonsMedialog"></div></div></div><div class="row mt-2 justify-content-between dt-layout-table"><div class="d-md-flex justify-content-between align-items-center col-12 dt-layout-full col-md"><table id="rayonsMedialog" class="table text-center col-md-12 dataTable" style="width: 100%;"><colgroup><col data-dt-column="0" style="width: 220.609px;"><col data-dt-column="1" style="width: 507.906px;"><col data-dt-column="2" style="width: 171.828px;"><col data-dt-column="3" style="width: 72.6562px;"></colgroup>
+                <thead>
+                    <tr><th class="text-center col dt-type-numeric dt-orderable-asc dt-orderable-desc" data-dt-column="0" rowspan="1" colspan="1"><div class="dt-column-header"><span class="dt-column-title">Code rayon</span><span class="dt-column-order" role="button" aria-label="Code rayon: Activate to sort" tabindex="0"></span></div></th><th class="text-center col dt-orderable-asc dt-orderable-desc dt-ordering-asc" data-dt-column="1" rowspan="1" colspan="1" aria-sort="ascending"><div class="dt-column-header"><span class="dt-column-title">Libellé rayon</span><span class="dt-column-order" role="button" aria-label="Libellé rayon: Activate to invert sorting" tabindex="0"></span></div></th><th class="text-center col dt-type-numeric dt-orderable-asc dt-orderable-desc" data-dt-column="2" rowspan="1" colspan="1"><div class="dt-column-header"><span class="dt-column-title">Nombre</span><span class="dt-column-order" role="button" aria-label="Nombre: Activate to sort" tabindex="0"></span></div></th><th class="text-end col dt-orderable-asc dt-orderable-desc" data-dt-column="3" rowspan="1" colspan="1"><div class="dt-column-header"><span class="dt-column-title">&nbsp;</span><span class="dt-column-order" role="button" aria-label="&amp;nbsp;: Activate to sort" tabindex="0"></span></div></th></tr>
+                </thead>
+                <tbody><tr>
+                            <td class="text-center col dt-type-numeric">5</td>
+                            <td class="text-center col sorting_1">AGENDAS</td>
+                            <td class="text-center col dt-type-numeric">21</td>
+                            <td class="text-end col"><a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=5" coderayonmag="5" title="Afficher les résultats sur le site à l'aide du code magasin" target="_blank" rel="noopener"><i class="far fa-search"></i></a></td>
+                        </tr><tr>
+                            <td class="text-center col dt-type-numeric">8</td>
+                            <td class="text-center col sorting_1">ATTACHES ET FIXATIONS</td>
+                            <td class="text-center col dt-type-numeric">17</td>
+                            <td class="text-end col"><a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=8" coderayonmag="8" title="Afficher les résultats sur le site à l'aide du code magasin" target="_blank" rel="noopener"><i class="far fa-search"></i></a></td>
+                        </tr><tr>
+                            <td class="text-center col dt-type-numeric">9998</td>
+                            <td class="text-center col sorting_1">AUTRES</td>
+                            <td class="text-center col dt-type-numeric">57234</td>
+                            <td class="text-end col"><a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=9998" coderayonmag="9998" title="Afficher les résultats sur le site à l'aide du code magasin" target="_blank" rel="noopener"><i class="far fa-search"></i></a></td>
+                        </tr><tr>
+                            <td class="text-center col dt-type-numeric">30</td>
+                            <td class="text-center col sorting_1">BABY FOOT ET JEUX DE PLEIN AIR</td>
+                            <td class="text-center col dt-type-numeric">31</td>
+                            <td class="text-end col"><a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=30" coderayonmag="30" title="Afficher les résultats sur le site à l'aide du code magasin" target="_blank" rel="noopener"><i class="far fa-search"></i></a></td>
+                        </tr><tr>
+                            <td class="text-center col dt-type-numeric">39</td>
+                            <td class="text-center col sorting_1">BOLDUC</td>
+                            <td class="text-center col dt-type-numeric">7</td>
+                            <td class="text-end col"><a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=39" coderayonmag="39" title="Afficher les résultats sur le site à l'aide du code magasin" target="_blank" rel="noopener"><i class="far fa-search"></i></a></td>
+                        </tr><tr>
+                            <td class="text-center col dt-type-numeric">4</td>
+                            <td class="text-center col sorting_1">CAHIERS BLOCS ET NOTES</td>
+                            <td class="text-center col dt-type-numeric">173</td>
+                            <td class="text-end col"><a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=4" coderayonmag="4" title="Afficher les résultats sur le site à l'aide du code magasin" target="_blank" rel="noopener"><i class="far fa-search"></i></a></td>
+                        </tr><tr>
+                            <td class="text-center col dt-type-numeric">19</td>
+                            <td class="text-center col sorting_1">CALCULATRICES ET CLES USB</td>
+                            <td class="text-center col dt-type-numeric">61</td>
+                            <td class="text-end col"><a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=19" coderayonmag="19" title="Afficher les résultats sur le site à l'aide du code magasin" target="_blank" rel="noopener"><i class="far fa-search"></i></a></td>
+                        </tr><tr>
+                            <td class="text-center col dt-type-numeric">14</td>
+                            <td class="text-center col sorting_1">CHEMISES</td>
+                            <td class="text-center col dt-type-numeric">75</td>
+                            <td class="text-end col"><a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=14" coderayonmag="14" title="Afficher les résultats sur le site à l'aide du code magasin" target="_blank" rel="noopener"><i class="far fa-search"></i></a></td>
+                        </tr><tr>
+                            <td class="text-center col dt-type-numeric">17</td>
+                            <td class="text-center col sorting_1">CLASSEMENTS ET RANGEMENTS</td>
+                            <td class="text-center col dt-type-numeric">43</td>
+                            <td class="text-end col"><a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=17" coderayonmag="17" title="Afficher les résultats sur le site à l'aide du code magasin" target="_blank" rel="noopener"><i class="far fa-search"></i></a></td>
+                        </tr><tr>
+                            <td class="text-center col dt-type-numeric">11</td>
+                            <td class="text-center col sorting_1">CLASSEURS</td>
+                            <td class="text-center col dt-type-numeric">32</td>
+                            <td class="text-end col"><a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=11" coderayonmag="11" title="Afficher les résultats sur le site à l'aide du code magasin" target="_blank" rel="noopener"><i class="far fa-search"></i></a></td>
+                        </tr><tr>
+                            <td class="text-center col dt-type-numeric">10</td>
+                            <td class="text-center col sorting_1">DESSIN ET LOISIRS CREATIFS</td>
+                            <td class="text-center col dt-type-numeric">140</td>
+                            <td class="text-end col"><a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=10" coderayonmag="10" title="Afficher les résultats sur le site à l'aide du code magasin" target="_blank" rel="noopener"><i class="far fa-search"></i></a></td>
+                        </tr><tr>
+                            <td class="text-center col dt-type-numeric">6</td>
+                            <td class="text-center col sorting_1">ECRITURE ET CORRECTION</td>
+                            <td class="text-center col dt-type-numeric">216</td>
+                            <td class="text-end col"><a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=6" coderayonmag="6" title="Afficher les résultats sur le site à l'aide du code magasin" target="_blank" rel="noopener"><i class="far fa-search"></i></a></td>
+                        </tr><tr>
+                            <td class="text-center col dt-type-numeric">40</td>
+                            <td class="text-center col sorting_1">ENVELOPPES</td>
+                            <td class="text-center col dt-type-numeric">2</td>
+                            <td class="text-end col"><a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=40" coderayonmag="40" title="Afficher les résultats sur le site à l'aide du code magasin" target="_blank" rel="noopener"><i class="far fa-search"></i></a></td>
+                        </tr><tr>
+                            <td class="text-center col dt-type-numeric">2</td>
+                            <td class="text-center col sorting_1">ENVELOPPES ETTIQUETTES</td>
+                            <td class="text-center col dt-type-numeric">12</td>
+                            <td class="text-end col"><a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=2" coderayonmag="2" title="Afficher les résultats sur le site à l'aide du code magasin" target="_blank" rel="noopener"><i class="far fa-search"></i></a></td>
+                        </tr><tr>
+                            <td class="text-center col dt-type-numeric">26</td>
+                            <td class="text-center col sorting_1">HEROS - LICENCES</td>
+                            <td class="text-center col dt-type-numeric">2</td>
+                            <td class="text-end col"><a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=26" coderayonmag="26" title="Afficher les résultats sur le site à l'aide du code magasin" target="_blank" rel="noopener"><i class="far fa-search"></i></a></td>
+                        </tr><tr>
+                            <td class="text-center col dt-type-numeric">12</td>
+                            <td class="text-center col sorting_1">INTERCALAIRES</td>
+                            <td class="text-center col dt-type-numeric">80</td>
+                            <td class="text-end col"><a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=12" coderayonmag="12" title="Afficher les résultats sur le site à l'aide du code magasin" target="_blank" rel="noopener"><i class="far fa-search"></i></a></td>
+                        </tr><tr>
+                            <td class="text-center col dt-type-numeric">20</td>
+                            <td class="text-center col sorting_1">JEUX D'EVEIL ET DE DECOUVERTES</td>
+                            <td class="text-center col dt-type-numeric">37</td>
+                            <td class="text-end col"><a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=20" coderayonmag="20" title="Afficher les résultats sur le site à l'aide du code magasin" target="_blank" rel="noopener"><i class="far fa-search"></i></a></td>
+                        </tr><tr>
+                            <td class="text-center col dt-type-numeric">24</td>
+                            <td class="text-center col sorting_1">JEUX DE CONSTRUCTION</td>
+                            <td class="text-center col dt-type-numeric">34</td>
+                            <td class="text-end col"><a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=24" coderayonmag="24" title="Afficher les résultats sur le site à l'aide du code magasin" target="_blank" rel="noopener"><i class="far fa-search"></i></a></td>
+                        </tr><tr>
+                            <td class="text-center col dt-type-numeric">25</td>
+                            <td class="text-center col sorting_1">JEUX DE SOCIETE</td>
+                            <td class="text-center col dt-type-numeric">39</td>
+                            <td class="text-end col"><a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=25" coderayonmag="25" title="Afficher les résultats sur le site à l'aide du code magasin" target="_blank" rel="noopener"><i class="far fa-search"></i></a></td>
+                        </tr><tr>
+                            <td class="text-center col dt-type-numeric">23</td>
+                            <td class="text-center col sorting_1">JEUX EDUCATIFS</td>
+                            <td class="text-center col dt-type-numeric">66</td>
+                            <td class="text-end col"><a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=23" coderayonmag="23" title="Afficher les résultats sur le site à l'aide du code magasin" target="_blank" rel="noopener"><i class="far fa-search"></i></a></td>
+                        </tr><tr>
+                            <td class="text-center col dt-type-numeric">38</td>
+                            <td class="text-center col sorting_1">JOUETS 1ER AGE</td>
+                            <td class="text-center col dt-type-numeric">49</td>
+                            <td class="text-end col"><a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=38" coderayonmag="38" title="Afficher les résultats sur le site à l'aide du code magasin" target="_blank" rel="noopener"><i class="far fa-search"></i></a></td>
+                        </tr><tr>
+                            <td class="text-center col dt-type-numeric">36</td>
+                            <td class="text-center col sorting_1">JOUETS RADIO-COMMANDES</td>
+                            <td class="text-center col dt-type-numeric">10</td>
+                            <td class="text-end col"><a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=36" coderayonmag="36" title="Afficher les résultats sur le site à l'aide du code magasin" target="_blank" rel="noopener"><i class="far fa-search"></i></a></td>
+                        </tr><tr>
+                            <td class="text-center col dt-type-numeric">21</td>
+                            <td class="text-center col sorting_1">LIVRE</td>
+                            <td class="text-center col dt-type-numeric">65</td>
+                            <td class="text-end col"><a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=21" coderayonmag="21" title="Afficher les résultats sur le site à l'aide du code magasin" target="_blank" rel="noopener"><i class="far fa-search"></i></a></td>
+                        </tr><tr>
+                            <td class="text-center col dt-type-numeric">47</td>
+                            <td class="text-center col sorting_1">LIVRE D'OR</td>
+                            <td class="text-center col dt-type-numeric">9</td>
+                            <td class="text-end col"><a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=47" coderayonmag="47" title="Afficher les résultats sur le site à l'aide du code magasin" target="_blank" rel="noopener"><i class="far fa-search"></i></a></td>
+                        </tr><tr>
+                            <td class="text-center col dt-type-numeric">31</td>
+                            <td class="text-center col sorting_1">LOISIRS CREATIFS</td>
+                            <td class="text-center col dt-type-numeric">50</td>
+                            <td class="text-end col"><a href="/listeliv.php?form_recherche_avancee=ok&amp;base=paper&amp;coderayonmag=31" coderayonmag="31" title="Afficher les résultats sur le site à l'aide du code magasin" target="_blank" rel="noopener"><i class="far fa-search"></i></a></td>
+                        </tr></tbody>
+            <tfoot></tfoot></table></div></div><div class="row mt-2 justify-content-between"><div class="d-md-flex justify-content-between align-items-center dt-layout-start col-md-auto me-auto"></div><div class="d-md-flex justify-content-between align-items-center dt-layout-end col-md-auto ms-auto"><div class="dt-paging"><nav aria-label="pagination"><ul class="pagination"><li class="dt-paging-button page-item disabled"><button class="page-link first" role="link" type="button" aria-controls="rayonsMedialog" aria-disabled="true" aria-label="First" data-dt-idx="first" tabindex="-1">Premier</button></li><li class="dt-paging-button page-item disabled"><button class="page-link previous" role="link" type="button" aria-controls="rayonsMedialog" aria-disabled="true" aria-label="Previous" data-dt-idx="previous" tabindex="-1">Précédent</button></li><li class="dt-paging-button page-item active"><button class="page-link" role="link" type="button" aria-controls="rayonsMedialog" aria-current="page" data-dt-idx="0">1</button></li><li class="dt-paging-button page-item"><button class="page-link" role="link" type="button" aria-controls="rayonsMedialog" data-dt-idx="1">2</button></li><li class="dt-paging-button page-item"><button class="page-link next" role="link" type="button" aria-controls="rayonsMedialog" aria-label="Next" data-dt-idx="next">Suivant</button></li><li class="dt-paging-button page-item"><button class="page-link last" role="link" type="button" aria-controls="rayonsMedialog" aria-label="Last" data-dt-idx="last">Dernier</button></li></ul></nav></div></div></div><div class="dt-autosize" style="width: 100%; height: 0px;"></div></div>
+            </div>
+</div>
+</div></div><script src="https://static.epagine.fr/vendor/jquery-3.7.1.min.js"></script>
+<script src="https://static.epagine.fr/vendor/jquery-ui-1.13.3.min.js"></script>
+<script src="https://static.epagine.fr/mediaweb3/js/popper.min.js"></script>
+<script src="https://static.epagine.fr/bootstrap-5.3.8/js/bootstrap.bundle.min.js"></script>
+
+
+<script type="text/javascript" src="https://static.epagine.fr/vendor/jquery.form.min.js"></script>
+<script src="https://static.epagine.fr/mediaweb3/js/jquery.cookie.js"></script>
+
+
+<link rel="stylesheet" href="https://unpkg.com/@jarstone/dselect/dist/css/dselect.css">
+<script src="https://unpkg.com/@jarstone/dselect/dist/js/dselect.js"></script>
+
+
+
+<link rel="stylesheet" href="https://static.epagine.fr/fontawesome-pro-7.0.1-web/css/all.css">
+<link rel="stylesheet" href="https://static.epagine.fr/mediaweb3/js/plugins/farbtastic/farbtastic.css" type="text/css">
+<script type="text/javascript" src="https://static.epagine.fr/mediaweb3/js/plugins/farbtastic/farbtastic.js"></script>
+<script src="https://static.epagine.fr/mediaweb3/js/moment.min.js"></script>
+
+<!-- Datatable CSS -->
+<link rel="stylesheet" href="https://static.epagine.fr/mediaweb3/js/datatables/2.3.4/css/buttons.dataTables.min.css">
+<link rel="stylesheet" href="https://static.epagine.fr/mediaweb3/js/datatables/2.3.4/css/dataTables.bootstrap5.min.css">
+
+<!-- JS DataTables core -->
+<script src="https://static.epagine.fr/mediaweb3/js/datatables/2.3.4/js/dataTables.min.js"></script>
+<script src="https://static.epagine.fr/mediaweb3/js/datatables/2.3.4/js/dataTables.bootstrap5.min.js"></script>
+
+<!-- Datatable Buttons -->
+<script src="https://static.epagine.fr/mediaweb3/js/datatables/2.3.4/js/dataTables.buttons.min.js"></script>
+<script src="https://static.epagine.fr/mediaweb3/js/datatables/2.3.4/js/buttons.bootstrap5.min.js"></script>
+<script src="https://static.epagine.fr/mediaweb3/js/datatables/2.3.4/js/buttons.html5.min.js"></script>
+<script src="https://static.epagine.fr/mediaweb3/js/datatables/2.3.4/js/buttons.print.min.js"></script>
+
+<!-- Datatable plugins -->
+<script src="https://static.epagine.fr/mediaweb3/js/datatables/2.3.4/js/currency.js"></script>
+<script src="https://static.epagine.fr/mediaweb3/js/datatables/2.3.4/js/date-eu.js"></script>
+
+<!-- Dépendances pour export -->
+<script src="https://static.epagine.fr/mediaweb3/js/datatables/2.3.4/js/jszip.min.js"></script>
+<script src="https://static.epagine.fr/mediaweb3/js/datatables/2.3.4/js/pdfmake.min.js"></script>
+<script src="https://static.epagine.fr/mediaweb3/js/datatables/2.3.4/js/vfs_fonts.js"></script>
+
+<!-- Barcode -->
+<script type="text/javascript" src="https://static.epagine.fr/mediaweb3/js/JsBarcode.all.min.js"></script>
+
+<script type="text/javascript" src="articleBackpack.js"></script>
+<script type="text/javascript" src="gestion.js"></script>
+<script type="text/javascript" src="https://static.epagine.fr/vendor/datepicker-fr.js"></script>
+<script type="text/javascript" src="https://static.epagine.fr/vendor/jquery.datetimepicker.js"></script>
+<script src="js/script.js?v=1.1"></script>
+
+<script type="text/javascript" src="https://static.epagine.fr/vendor/bootstrap-datepicker/1.4.0/js/bootstrap-datepicker.min.js"></script>
+<script type="text/javascript" src="https://static.epagine.fr/vendor/bootstrap-datepicker/1.4.0/locales/bootstrap-datepicker.fr.min.js" charset="UTF-8"></script>
+<script type="text/javascript" src="https://static.epagine.fr/vendor/axios-0.21.min.js"></script>
+    <script type="text/javascript" src="js/loadModalSearch.js?v=1.1"></script>
+    <script type="text/javascript">
+        DataTable.defaults.column.orderSequence = ['asc', 'desc'];
+        function delete_mot_lib(gencod, typeProduit) {
+            $('#motlibraire_' + gencod + '-' + typeProduit).tooltip();
+            if (!confirm('Confirmez-vous la suppression des mots du libraire pour cet article')) {
+                return false;
+            } else {
+                var motlib = $('#motlibraire_' + gencod + '-' + typeProduit);
+                var gencod = gencod;
+
+                var bodyFormData = new FormData();
+                bodyFormData.append('del_gencod', gencod);
+
+                axios({
+                        method: "post",
+                        url: "/gestion/infoplus.php",
+                        data: bodyFormData,
+                        headers: {
+                            "Content-Type": "multipart/form-data"
+                        },
+                    })
+                    .then(response => {
+
+                        if (response.data != 'delete_error') {
+                            motlib.hide();
+                            $.ajax({
+                                url: '/gestion/ajax_motslib_gestion.php',
+                                type: 'post',
+                                data: {
+                                    arrayMag: response.data,
+                                    page: 'gestion',
+                                },
+                                beforeSend: function() {
+                                    $('.coup_coeur_list').html('<div class="loading_svg text-center"><i class="fas fa-spinner fa-pulse fa-2x"></i></div>');
+                                },
+                                success: function(data) {
+                                    $('.coup_coeur_list').html(data);
+                                    listenEvent();
+                                },
+                                error: function() {
+                                    alert('error');
+                                }
+                            });
+                        } else {
+                            alert('Erreur lors de la suppression.');
+                        }
+                    });
+                return true;
+            }
+        }
+
+        function listenEvent() {
+            $('.minMdl').mouseenter(function(e) {
+                if ($(this).find('.suppression_mdl').length !== 0)
+                    $(this).find('.suppression_mdl').show();
+            });
+            $('.minMdl').mouseleave(function(e) {
+                if ($(this).find('.suppression_mdl').length !== 0)
+                    $(this).find('.suppression_mdl').hide();
+            });
+            $('.minMdl').click(function(e) {
+                e.preventDefault();
+                if (!$(e.target).hasClass('suppression_mdl')) {
+                    var aArticleRef = $(this).attr('data-articleRef');
+                    var idmagasin = $(this).attr('data-magasin');
+                    console.log(aArticleRef);
+                    console.log(idmagasin);
+
+                    post('', {
+                        add_artRef: aArticleRef.toString(),
+                        magasinRef: idmagasin
+                    });
+                }
+            });
+            $('.suppression_mdl').click(function() {
+                if (!confirm('Confirmez-vous la suppression de tous les mots du libraire du magasin associés à cet article?')) return false;
+                else {
+                    var gencod = $(this).data('gencod');
+                    var type = $(this).data('typeprod');
+                    var magasin = $(this).data('idmagasin');
+                    $.ajax({
+                        url: '/gestion/infoplus.php',
+                        method: 'POST',
+                        data: {
+                            deletemlmag: 1,
+                            gencod: gencod,
+                            type: type,
+                            magasin: magasin
+                        },
+                        success: function(data) {
+                            if (data == 'delete_ok')
+                                $('#mdl_' + gencod + '_' + type).remove();
+                            else
+                                alert('error');
+                        },
+                        error: function(data) {
+                            alert('error');
+                        }
+                    });
+                }
+            });
+        }
+
+        $(function() {
+
+            //_____________________________________
+            //  Routing
+
+            $('[data-toggle="tooltip"]').tooltip();
+
+            
+            /* Dates pour modale recherche avancée */
+            $('.modalDate').blur(function() {
+                if ($(this).val() == '')
+                    $(this).val('JJ/MM/AAAA');
+            })
+
+        });
+        
+        // Initialisation des tooltips Bootstrap pour la description des champs
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+    </script>
+    
+<script type="text/javascript">
+    $(document).ready(function () {
+        		$('a').each(function(){
+			if($('#select_base select').val()!='allbooks')
+				$(this).attr('href','/listeliv.php?form_recherche_avancee=ok&base='+$('#select_base select').val()+'&coderayonmag='+$(this).attr('coderayonmag'));
+		});
+		
+        $('#rayonsMedialog').DataTable({
+            language: {
+                processing: 'Traitement en cours...',
+                search: 'Rechercher&nbsp;:',
+                paginate: {
+                    first: 'Premier',
+                    previous: 'Précédent',
+                    next: 'Suivant',
+                    last: 'Dernier'
+                },
+                lengthMenu: 'Afficher _MENU_ Résultats'
+            },
+            order: [[1, 'asc']],
+            pageLength: 25,
+            info: false
+        });
+
+        $('#select_base select').on('change', function () {
+            window.location.replace('/gestion/rayons_catalogue.php?base=' + $(this).val());
+        });
+
+    });
+
+</script></body></html>
